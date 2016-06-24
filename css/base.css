@@ -1,0 +1,500 @@
+/* @group Reset */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+textarea,
+input{
+    font-size: 100%;
+    height: auto;
+}
+
+/* @end */
+
+
+/*********************************************************************************************
+
+Project : rwdgrid - responsive grid system for your next project
+URI: http://rwdgrid.com/
+Version: 1.0
+Author: Vineeth G S 
+Author URI: http://www.gsvineeth.com
+Github URI: https://github.com/gsvineeth/rwdgrid/
+
+**********************************************************************************************
+
+1.  Normalize.css            
+2.  Grid 1200px 
+3.  Grid 960px
+4.  Grid 720px
+5.  Grid lt 720px/ Mobile 
+6.  Responsive Image
+
+
+/********************************************************************************************* 
+
+2.  Grid 1200px
+
+*********************************************************************************************/
+
+.container-12 {
+	margin:0 auto;
+	width: 1200px;
+	position: relative;
+}
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16 {
+	display:inline;
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.alpha {
+	margin-left: 0;
+}
+.omega {
+	margin-right: 0;
+}
+.beta {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.container-12 .grid-1 {
+	width:80px;
+}
+.container-12 .grid-2 {
+	width:180px;
+}
+.container-12 .grid-3 {
+	width:280px;
+}
+.container-12 .grid-4 {
+	width:380px;
+}
+.container-12 .grid-5 {
+	width:480px;
+}
+.container-12 .grid-6 {
+	width:580px;
+}
+.container-12 .grid-7 {
+	width:680px;
+}
+.container-12 .grid-8 {
+	width:780px;
+}
+.container-12 .grid-9 {
+	width:880px;
+}
+.container-12 .grid-10 {
+	width:980px;
+}
+.container-12 .grid-11 {
+	width:1080px;
+}
+.container-12 .grid-12 {
+	width:1180px;
+}
+
+.clear-fix{
+    clear: both;
+}
+
+/********************************************************************************************* 
+
+3.  Grid 960px (mediaqueries)
+
+*********************************************************************************************/
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+.container-12 {
+	width: 960px;
+}
+
+.container-12 .grid-1 {
+	width:60px;
+}
+.container-12 .grid-2 {
+	width:140px;
+}
+.container-12 .grid-3 {
+	width:220px;
+}
+.container-12 .grid-4 {
+	width:300px;
+}
+.container-12 .grid-5 {
+	width:380px;
+}
+.container-12 .grid-6 {
+	width:460px;
+}
+.container-12 .grid-7 {
+	width:540px;
+}
+.container-12 .grid-8 {
+	width:620px;
+}
+.container-12 .grid-9 {
+	width:700px;
+}
+.container-12 .grid-10 {
+	width:780px;
+}
+.container-12 .grid-11 {
+	width:860px;
+}
+.container-12 .grid-12 {
+	width:940px;
+}
+}
+	
+/********************************************************************************************* 
+
+4.  Grid 720px (mediaqueries)
+
+*********************************************************************************************/
+
+@media only screen and (min-width: 720px) and (max-width: 959px) {
+.container-12 {
+	width: 720px;
+}
+.container-12 .grid-1 {
+	width:40px;
+}
+.container-12 .grid-2 {
+	width:100px;
+}
+.container-12 .grid-3 {
+	width:160px;
+}
+.container-12 .grid-4 {
+	width:220px;
+}
+.container-12 .grid-5 {
+	width:280px;
+}
+.container-12 .grid-6 {
+	width:340px;
+}
+.container-12 .grid-7 {
+	width:400px;
+}
+.container-12 .grid-8 {
+	width:460px;
+}
+.container-12 .grid-9 {
+	width:520px;
+}
+.container-12 .grid-10 {
+	width:580px;
+}
+.container-12 .grid-11 {
+	width:640px;
+}
+.container-12 .grid-12 {
+	width:700px;
+}
+}
+	
+
+/********************************************************************************************* 
+
+5.  Grid lt 720px / Mobile (mediaqueries)
+
+*********************************************************************************************/
+	
+@media only screen and (max-width: 719px) {
+.container-12, .container-16 {
+	width: 90%;
+}
+.grid-1, .grid-2, .grid-3, .grid-4, .grid-5, .grid-6, .grid-7, .grid-8, .grid-9, .grid-10, .grid-11, .grid-12, .grid-13, .grid-14, .grid-15, .grid-16 {
+	width:100%;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.alpha {
+	margin-left: 0;
+}
+.omega {
+	margin-right: 0;
+}
+.beta {
+	margin-left: 0;
+	margin-right: 0;
+}
+.container-16 .grid-1, .container-16 .grid-2, .container-16 .grid-3, .container-16 .grid-4, .container-16 .grid-5, .container-16 .grid-6, .container-16 .grid-7, .container-16 .grid-8, .container-16 .grid-9, .container-16 .grid-10, .container-16 .grid-11, .container-16 .grid-12, .container-16 .grid-13, .container-16 .grid-14, .container-16 .grid-15, .container-16 .grid-16, .container-12 .grid-1, .container-12 .grid-2, .container-12 .grid-3, .container-12 .grid-4, .container-12 .grid-5, .container-12 .grid-6, .container-12 .grid-7, .container-12 .grid-8, .container-12 .grid-9, .container-12 .grid-10, .container-12 .grid-11, .container-12 .grid-12 {
+	width:100%;
+}
+}
+
+.inner{
+    padding: 20px;
+}
+
+/********************************************************************************************* 
+
+6.  Responsive Image
+
+*********************************************************************************************/
+
+
+img.scale, img.responsive {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+@charset "UTF-8";
+
+/*!
+ * Pikaday
+ * Copyright © 2014 David Bushell | BSD & MIT license | http://dbushell.com/
+ */
+
+.pika-single {
+    z-index: 9999;
+    display: block;
+    position: relative;
+    color: #333;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-bottom-color: #bbb;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/*
+clear child float (pika-lendar), using the famous micro clearfix hack
+http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.pika-single:before,
+.pika-single:after {
+    content: " ";
+    display: table;
+}
+.pika-single:after { clear: both }
+.pika-single { *zoom: 1 }
+
+.pika-single.is-hidden {
+    display: none;
+}
+
+.pika-single.is-bound {
+    position: absolute;
+    box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+}
+
+.pika-lendar {
+    float: left;
+    width: 240px;
+    margin: 8px;
+}
+
+.pika-title {
+    position: relative;
+    text-align: center;
+}
+
+.pika-label {
+    display: inline-block;
+    *display: inline;
+    position: relative;
+    z-index: 9999;
+    overflow: hidden;
+    margin: 0;
+    padding: 5px 3px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    background-color: #fff;
+}
+.pika-title select {
+    cursor: pointer;
+    position: absolute;
+    z-index: 9998;
+    margin: 0;
+    left: 0;
+    top: 5px;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.pika-prev,
+.pika-next {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    border: 0;
+    padding: 0;
+    width: 20px;
+    height: 30px;
+    /* hide text using text-indent trick, using width value (it's enough) */
+    text-indent: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 75% 75%;
+    opacity: .5;
+    *position: absolute;
+    *top: 0;
+}
+
+.pika-prev:hover,
+.pika-next:hover {
+    opacity: 1;
+}
+
+.pika-prev,
+.is-rtl .pika-next {
+    float: left;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAUklEQVR42u3VMQoAIBADQf8Pgj+OD9hG2CtONJB2ymQkKe0HbwAP0xucDiQWARITIDEBEnMgMQ8S8+AqBIl6kKgHiXqQqAeJepBo/z38J/U0uAHlaBkBl9I4GwAAAABJRU5ErkJggg==');
+    *left: 0;
+}
+
+.pika-next,
+.is-rtl .pika-prev {
+    float: right;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAYAAAAsEj5rAAAAU0lEQVR42u3VOwoAMAgE0dwfAnNjU26bYkBCFGwfiL9VVWoO+BJ4Gf3gtsEKKoFBNTCoCAYVwaAiGNQGMUHMkjGbgjk2mIONuXo0nC8XnCf1JXgArVIZAQh5TKYAAAAASUVORK5CYII=');
+    *right: 0;
+}
+
+.pika-prev.is-disabled,
+.pika-next.is-disabled {
+    cursor: default;
+    opacity: .2;
+}
+
+.pika-select {
+    display: inline-block;
+    *display: inline;
+}
+
+.pika-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0;
+}
+
+.pika-table th,
+.pika-table td {
+    width: 14.285714285714286%;
+    padding: 0;
+}
+
+.pika-table th {
+    color: #999;
+    font-size: 12px;
+    line-height: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pika-button {
+    cursor: pointer;
+    display: block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    border: 0;
+    margin: 0;
+    width: 100%;
+    padding: 5px;
+    color: #666;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: right;
+    background: #f5f5f5;
+}
+
+.pika-week {
+    font-size: 11px;
+    color: #999;
+}
+
+.is-today .pika-button {
+    color: #33aaff;
+    font-weight: bold;
+}
+
+.is-selected .pika-button {
+    color: #fff;
+    font-weight: bold;
+    background: #33aaff;
+    box-shadow: inset 0 1px 3px #178fe5;
+    border-radius: 3px;
+}
+
+.is-disabled .pika-button {
+    pointer-events: none;
+    cursor: default;
+    color: #999;
+    opacity: .3;
+}
+
+.pika-button:hover {
+    color: #fff !important;
+    background: #ff8000 !important;
+    box-shadow: none !important;
+    border-radius: 3px !important;
+}
