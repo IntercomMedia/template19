@@ -1320,7 +1320,7 @@ a.noBankAccount:hover{
 		font-size: 12px;
 	}
 
-} 
+}
 
 /* =========================================================================
 	
@@ -1369,11 +1369,6 @@ a.noBankAccount:hover{
     width: 100px;
     margin-bottom: 20px;
 }
-
-.loading {
-    background: url(../images/ajax-loader.gif) no-repeat center center;
-}
-
 
 .loadingPage .feature .fa{
 	font-size: 80px;
@@ -1974,7 +1969,7 @@ span.validateIcon div:after {
 
     
     #fields .fieldElement{
-	    height: 40px;
+	    height: 44px;
 	    border-width: 2px;
 	    border-radius: 5px;
     }
@@ -2198,7 +2193,12 @@ span.validateIcon div:after {
 	.page4s #certifyField {
 		margin: 10px auto;
 	}
-
+	
+	#fields .fieldElement#lname,
+	#fields .fieldElement#fname,
+	#fields .fieldElement#email{
+		width: 100%;
+	}
 	.page52 #fields #freqField,
 	.page52 #fields #pdField,
 	.page52 #fields #pd2Field {
