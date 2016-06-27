@@ -11,7 +11,7 @@ require("header.php");
 	        <h3>Click below to re-submit Your loan request</h3>
 			<div id="certify">
 						<p><input type="checkbox" name="option" id="certifyCheckBox">
-						<label for="certifyCheckBox">I certify that I am a U.S. Resident over the age of 18, I agree to the E-consent, <a href="javascript:{}" onclick="window.open('/privacy/', 'footer', 'width=500,height=400,scrollbars=yes,status=no,menubars=no');return false">Privacy Policy</a> &amp; <a href="javascript:{}" onclick="window.open('/terms/', 'footer', 'width=500,height=400,scrollbars=yes,status=no,menubars=no');return false">Terms of Use</a> and that I may receive special offers.</label></p>
+						<label for="certifyCheckBox">I certify that I am a U.S. Resident over the age of 18, I agree to the <a href="javascript:{}" onclick="window.open('/e-consent/', 'footer', 'width=500,height=400,scrollbars=yes,status=no,menubars=no');return false">E-consent</a>, <a href="javascript:{}" onclick="window.open('/privacy/', 'footer', 'width=500,height=400,scrollbars=yes,status=no,menubars=no');return false">Privacy Policy</a> &amp; <a href="javascript:{}" onclick="window.open('/terms/', 'footer', 'width=500,height=400,scrollbars=yes,status=no,menubars=no');return false">Terms of Use</a> and that I may receive special offers.</label></p>
 					</div>
 			<button class="submitBtn">Submit</button>
 			<a href="#" class="editBtn">Edit/View Info</a>

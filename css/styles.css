@@ -1628,6 +1628,86 @@ a.noBankAccount:hover{
 
 /* =========================================================================
 	
+	11.1 Popup Page
+
+============================================================================*/
+
+.pop .wrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	height: 100vh;
+}
+
+.pop-container {
+	max-width: 700px;
+	margin: 0 auto;
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+}
+
+.pop-container header {
+	text-align: center;
+	position: relative;
+	padding: 60px 0 0 0;
+	background: url(../images/template-19-pop-bg.png);
+	background-size: cover;
+}
+
+.pop-container header h1 {
+	color: #fff;
+	margin-bottom: 60px;
+}
+
+
+.pop-container .featurette {
+	position: static;
+	font-size: .75em;
+	padding: 2px 0;
+	color: #fff;
+	background: #8CB848;
+	display: block;
+}
+
+
+.pop-container .featurette strong {
+	color: #323F47;
+}
+
+.pop-container .offers {
+	padding: 20px;
+	margin: 0;
+	background: url(../images/template-19-money-bg.jpg) right bottom no-repeat;
+}
+
+.pop-container .offers li {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 10px;
+	max-width: 350px;
+}
+
+.pop-container .offers a {
+	display: inline-block;
+	padding-right: 30px;
+	line-height: 2.5em;
+	text-transform: uppercase;
+	height: 2.5em;
+}
+
+.offers .offer-title {
+	font-size: 1.5em;
+	margin-right: 20px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.pop-container .offers a i {
+	margin-right: 20px;
+	font-size: 2.5em;
+}
+
+/* =========================================================================
+	
 	12. Footer
 
 ============================================================================*/
@@ -1694,8 +1774,6 @@ footer .disclaimer {
     font-size: 12px;
     padding: 0;
 }
-
-
 
 
 /* =========================================================================
