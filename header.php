@@ -61,11 +61,124 @@ $siteName = 'Cash 101';
     <script src="js/moment.js"></script>
     <script src="js/pikaday.js"></script>
     <script type="text/javascript">
+	    jQuery.validator.addMethod('payPeriod1', function(val, el, params){
+			
+					var npd1Arr= val.split('-');
+					if(npd1Arr.length < 3) {
+						return false;
+					}
+					
+					var today=new Date(new Date().toDateString());
+					var nextPD1=new Date(npd1Arr[0], npd1Arr[1] - 1, npd1Arr[2]);
+					
+					var maxDays = $(params[0]).val();
+					switch (maxDays) {
+						case '2':
+							maxDays=6;
+							break;
+						case '4':
+							maxDays=13;
+							break;
+						case '8':
+							maxDays=28;
+							break;
+						case '16':
+							maxDays=13;
+							break;
+					}
+										
+					if(!maxDays) {
+						return false;
+					}
+					
+					params[0] = maxDays;
+					var maxMS=maxDays * (1000 * 60 * 60 * 24);
+					return nextPD1.getTime() > today.getTime() + maxMS;
+			}, jQuery.validator.format("Date of 1st payday may not be more than {0} days based on your pay period selection"));
+			
+			jQuery.validator.addMethod('payPeriod2Min', function(val, el, params){
+				
+					var npd1Arr= $(params[1]).val().split('-');
+					var npd2Arr= val.split('-');
+					if(npd2Arr.length < 3 || npd1Arr.length < 3) {
+						return false;
+					}
+					var minDays = $(params[0]).val();
+					if(!minDays) {
+						return false;
+					}
+					switch (minDays) {
+						case '2':
+							minDays=6;
+							break;
+						case '4':
+							minDays=13;
+							break;
+						case '8':
+							minDays=28;
+							break;
+						case '16':
+							minDays=13;
+							break;
+					}
+					
+					params[0] = minDays;
+					
+					var today=new Date(new Date().toDateString());
+					var nextPD1=new Date(npd1Arr[0], npd1Arr[1] - 1, npd1Arr[2]);
+					var nextPD2=new Date(npd2Arr[0], npd2Arr[1] - 1, npd2Arr[2]);
+			
+					var minDays = params[0];
+					var minMS=minDays * (1000 * 60 * 60 * 24);
+					return nextPD2.getTime() < nextPD1.getTime() + minMS;
+					
+			}, jQuery.validator.format('Date of 2nd payday may not be less than {0} days after date of 1st payday based on your pay period selection'));
+			
+			jQuery.validator.addMethod('payPeriod2Max', function(val, el, params){
+				
+					var npd1Arr= $(params[1]).val().split('-');
+					var npd2Arr= val.split('-');
+					
+					if(npd2Arr.length < 3 || npd1Arr.length < 3) {
+						return false;
+					}
+					
+					var today=new Date(new Date().toDateString());
+					var nextPD1=new Date(npd1Arr[0], npd1Arr[1] - 1, npd1Arr[2]);
+					var nextPD2=new Date(npd2Arr[0], npd2Arr[1] - 1, npd2Arr[2]);
+					
+					var maxDays = $(params[0]).val();
+					if(!maxDays) {
+						return false;
+					}
+					switch (minDays) {
+						case '2':
+							maxDays=6;
+							break;
+						case '4':
+							maxDays=13;
+							break;
+						case '8':
+							maxDays=28;
+							break;
+						case '16':
+							maxDays=13;
+							break;
+					}
+					
+					params[0] = maxDays;
+					
+					var maxMS=maxDays * (1000 * 60 * 60 * 24);
+					return nextPD2.getTime() < nextPD1.getTime() + minMS;
+					
+			}, jQuery.validator.format('Date of 2nd payday may not be less than {0} days after date of 1st payday based on your pay period selection'));
+	
     	$.validator.addMethod("phoneUS", function(phone_number, element) {
 			phone_number = phone_number.replace(/\s+/g, "");
+			
 			return this.optional(element) || phone_number.length > 9 &&
 				phone_number.match(/^(\+?1-?)?(\([2-9]([02-9]\d|1[02-9])\)|[2-9]([02-9]\d|1[02-9]))-?[2-9]([02-9]\d|1[02-9])-?\d{4}$/);
-		}, "Please specify a valid phone number");
+			}, "Please specify a valid phone number");
 		
         function popup(content){
         	<?php if(!$ismobile): ?>
@@ -122,7 +235,6 @@ $siteName = 'Cash 101';
             $('#congratulationsPanel').parallax("center", .15, false);
             $('#infoPanels').parallax("right", .15, true);
             $('.prominent header .icon').parallax("right", .26, true);
-            $("#congratulationsPanel").sticky({topSpacing:<?php if($mobile){ echo '-194';} else{ echo '0';} ?>});
         }
         
         $("#emp_status").change(function(){
@@ -225,7 +337,7 @@ $siteName = 'Cash 101';
     	    if (strpos($pageName,'page4') !== FALSE) { ?>
     	    var validator = $("#page4Form").validate({
     	    	errorPlacement: function(error, element) {
-        			error.appendTo( element.siblings(".validateIcon"));
+        			error.appendTo( element.parent());
         		},
         		errorElement: "span",
         		wrapper: "div",
@@ -285,19 +397,21 @@ $siteName = 'Cash 101';
     	    		},
     	    		
     	    		amt: {
-    	    			required: true,
-    	    	    },
-    	    	    
-    	    	    next_pay: {
-    	    	    	required: true,
-    	    	    },
-    	    	    
-    	    	    next_pay2: {
-    	    	    	required: true,
-    	    	    },
-    	    	    freq: {
-    	    	    	required: true,
-    	    	    }
+  	    			required: true,
+  	    	    },
+  	    	    
+  	    	    'next_pay': {
+  	    	    	required: true,
+	  	    	    payPeriod1: ['[name="pay_period"]'],
+  	    	    },
+  	    	    'next_pay2': {
+	  	    	    payPeriod2Min: ['[name="pay_period"]', '[name="next_pay"]'],
+	  	    	    payPeriod2Max: ['[name="pay_period"]', '[name="next_pay"]'],
+  	    	    	required: true,
+  	    	    },
+  	    	    freq: {
+  	    	    	required: true,
+  	    	    }
     	    	}
     	    });
     	    

@@ -33,15 +33,12 @@ include("header.php");
 					</div>
 					<div class="fieldElement omega selecter" id="freqField">
 						<label class="grid-2 alpha" for="freq">Pay Frequency</label>
-						<select name="freq" id="freq" class="grid-4">
-					<!--AMOUNT_START-->
+						<select id="pay_period" name="pay_period" class="grid-4 valid">
 							<option value="">Pay Frequency</option>
-							<option value="100">$100</option>
-							<option value="200">$200</option>
-							<option value="300">$300</option>
-							<option value="400">$400</option>
-							<option value="500">$500+</option>
-						<!--AMOUNT_END-->
+							<option value="2">Weekly</option>
+							<option value="4" selected="selected">Every Other Week</option>
+							<option value="8">Monthly</option>
+							<option value="16">Twice-Monthly</option>
 						</select>
 						<i class="fa fa-check"></i>
 					</div>
