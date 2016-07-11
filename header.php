@@ -61,8 +61,8 @@ $siteName = 'Cash 101';
     <script src="js/moment.js"></script>
     <script src="js/pikaday.js"></script>
     <script type="text/javascript">
-	    jQuery.validator.addMethod('payPeriod1', function(val, el, params){
-			
+
+	   	jQuery.validator.addMethod('payPeriod1', function(val, el, params){
 					var npd1Arr= val.split('-');
 					if(npd1Arr.length < 3) {
 						return false;
@@ -70,30 +70,16 @@ $siteName = 'Cash 101';
 					
 					var today=new Date(new Date().toDateString());
 					var nextPD1=new Date(npd1Arr[0], npd1Arr[1] - 1, npd1Arr[2]);
-					
-					var maxDays = $(params[0]).val();
-					switch (maxDays) {
-						case '2':
-							maxDays=6;
-							break;
-						case '4':
-							maxDays=13;
-							break;
-						case '8':
-							maxDays=28;
-							break;
-						case '16':
-							maxDays=13;
-							break;
-					}
+					var maxDays = params[0];
 										
 					if(!maxDays) {
 						return false;
 					}
-					
-					params[0] = maxDays;
+					params[0]
 					var maxMS=maxDays * (1000 * 60 * 60 * 24);
-					return nextPD1.getTime() > today.getTime() + maxMS;
+					params = 20;
+					
+					return nextPD1.getTime() < today.getTime() + maxMS && nextPD1.getTime() > today.getTime();
 			}, jQuery.validator.format("Date of 1st payday may not be more than {0} days based on your pay period selection"));
 			
 			jQuery.validator.addMethod('payPeriod2Min', function(val, el, params){
@@ -107,6 +93,7 @@ $siteName = 'Cash 101';
 					if(!minDays) {
 						return false;
 					}
+					
 					switch (minDays) {
 						case '2':
 							minDays=6;
@@ -151,7 +138,7 @@ $siteName = 'Cash 101';
 					if(!maxDays) {
 						return false;
 					}
-					switch (minDays) {
+					switch (maxDays) {
 						case '2':
 							maxDays=6;
 							break;
@@ -209,11 +196,38 @@ $siteName = 'Cash 101';
         
         
         $(document).ready(function() {
-        var currentDate = new Date();
-        var currentTime = currentDate.getTime();
-        currentTime= new Date(currentTime);
+        	var currentDate = new Date();
+       	 var currentTime = currentDate.getTime();        
+	      
+	      function addPay1Rule(el) {
+		      
+		      var payPeriod = $(el).val();
+		    	switch (payPeriod) {
+					case '2':
+						payPeriod=6;
+						break;
+					case '4':
+						payPeriod=13;
+						break;
+					case '8':
+						payPeriod=28;
+						break;
+					case '16':
+						payPeriod=13;
+					break;
+				}
+				
+				$('#next_pay').rules('add', {payPeriod1: payPeriod});
+        }
         
-        console.log(currentTime);
+		  currentTime= new Date(currentTime);
+        
+		  $('#next_pay').rules('add', {payPeriod1: payPeriod});
+	    	
+		  $('#pay_period').on('change', function(){
+			  addPay1Rule(this);
+	    	});
+	    	
         
         <?php if ($pageName == 'page4' || $pageName == 'page5'): ?>
 		var picker = new Pikaday({ 
@@ -402,11 +416,8 @@ $siteName = 'Cash 101';
   	    	    
   	    	    'next_pay': {
   	    	    	required: true,
-	  	    	    payPeriod1: ['[name="pay_period"]'],
   	    	    },
   	    	    'next_pay2': {
-	  	    	    payPeriod2Min: ['[name="pay_period"]', '[name="next_pay"]'],
-	  	    	    payPeriod2Max: ['[name="pay_period"]', '[name="next_pay"]'],
   	    	    	required: true,
   	    	    },
   	    	    freq: {
