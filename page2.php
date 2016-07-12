@@ -272,7 +272,7 @@ include("header.php");
                         <label for="mphone" class="grid-2 alpha">Mobile Phone #:</label>
                         <input type="text" id="mphone" name="mphone" value="" class="grid-2"/>
                         <input type="text" id="mphone2" name="mphone2" value="" class="grid-1"/>
-                        <input type="text" id="mphone2" name="mphone2" value="" class="grid-2 omega"/>
+                        <input type="text" id="mphone3" name="mphone3" value="" class="grid-2 omega"/>
                     </div>
 
                     <div id="email_field2" class="fieldElement required">
@@ -1485,6 +1485,12 @@ include("header.php");
                 </div><input type="submit" name="submit" class="submitBtn" value="Request Cash Now"> <input type="hidden" name="siteID" value="7482"> <input type="hidden" name="uID" value="0"> <input type="hidden" name="emID" value="166560478"> <input type="hidden" name="affID" value=""> <input type="hidden" name="opt" value=""> <input type="hidden" name="subc1" value=""> <input type="hidden" name="subc2" value=""> <input type="hidden" name="subc3" value=""> <input type="hidden" name="rep" value="0">
             </form>
         </div>
-    </div><?php
+    </div>
+    <script src="js/page2.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjRCRlyywTIuaiIokB6h26mT0VcUz6hds&libraries=places&callback=initAutocomplete"
+        async defer></script>
+    
 
+<?php
+		
     include("footer.php"); ?>

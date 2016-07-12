@@ -29,10 +29,13 @@ include("header.php");
 								<option value="500">$500+</option>
 							<!--AMOUNT_END-->
 							</select>
-						<i class="fa fa-check"></i>
+							<i class="fa fa-check"></i>
+						<div class="spacer grid-2 alpha">
+							&nbsp;</div>
+							<div class="err-message grid-4" for="amt"></div>
 					</div>
 					<div class="fieldElement omega selecter" id="freqField">
-						<label class="grid-2 alpha" for="freq">Pay Frequency</label>
+						<label class="grid-2 alpha" for="pay_period">Pay Frequency</label>
 						<select id="pay_period" name="pay_period" class="grid-4 valid">
 							<option value="">Pay Frequency</option>
 							<option value="2">Weekly</option>
@@ -41,18 +44,28 @@ include("header.php");
 							<option value="16">Twice-Monthly</option>
 						</select>
 						<i class="fa fa-check"></i>
+						<div class="spacer grid-2 alpha">
+							&nbsp;
+							</div>
+						<div class="err-message grid-4" for="pay_period"></div>
 					</div>
 					
 					<div class="fieldElement" id="pdField">
 						<label class="grid-2 alpha" for="next_pay">Date of 1st Payday</label>
 						<input type="text" name="next_pay" id="next_pay" placeholder="Date of 1st Payday" value="" class="grid-4">
 						<i class="fa fa-check"></i>
+						<div class="spacer grid-2 alpha">&nbsp;</div>
+						<div class="err-message grid-4" for="next_pay"></div>
 					</div>
 					
 					<div class="fieldElement omega" id="pd2Field">
 						<label class="grid-2 alpha" for="next_pay2">Date of 2nd Payday</label>
 						<input type="text" name="next_pay2" id="next_pay2" placeholder="Date of 2nd Payday" value=""class="grid-4" >
 						<i class="fa fa-check"></i>
+						<div class="spacer grid-2 alpha">
+							&nbsp;
+						</div>
+						<div class="err-message grid-4" for="next_pay2"></div>
 					</div>
 					<div class="clear-fix"></div>
 					<div class="spacer grid-2 alpha">&nbsp;</div>
@@ -64,6 +77,11 @@ include("header.php");
 					</div>
             </form>
         </div>
-    </div><?php
-
+    </div>
+    
+    
+		
+		<script src="js/payday-validation.js"></script>
+		
+    <?php
     include("footer.php"); ?>

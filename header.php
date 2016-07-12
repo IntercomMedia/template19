@@ -60,106 +60,7 @@ $siteName = 'Cash 101';
     <script type="text/javascript" src="js/datetime.js"></script>
     <script src="js/moment.js"></script>
     <script src="js/pikaday.js"></script>
-    <script type="text/javascript">
-
-	   	jQuery.validator.addMethod('payPeriod1', function(val, el, params){
-					var npd1Arr= val.split('-');
-					if(npd1Arr.length < 3) {
-						return false;
-					}
-					
-					var today=new Date(new Date().toDateString());
-					var nextPD1=new Date(npd1Arr[0], npd1Arr[1] - 1, npd1Arr[2]);
-					var maxDays = params[0];
-										
-					if(!maxDays) {
-						return false;
-					}
-					params[0]
-					var maxMS=maxDays * (1000 * 60 * 60 * 24);
-					params = 20;
-					
-					return nextPD1.getTime() < today.getTime() + maxMS && nextPD1.getTime() > today.getTime();
-			}, jQuery.validator.format("Date of 1st payday may not be more than {0} days based on your pay period selection"));
-			
-			jQuery.validator.addMethod('payPeriod2Min', function(val, el, params){
-				
-					var npd1Arr= $(params[1]).val().split('-');
-					var npd2Arr= val.split('-');
-					if(npd2Arr.length < 3 || npd1Arr.length < 3) {
-						return false;
-					}
-					var minDays = $(params[0]).val();
-					if(!minDays) {
-						return false;
-					}
-					
-					switch (minDays) {
-						case '2':
-							minDays=6;
-							break;
-						case '4':
-							minDays=13;
-							break;
-						case '8':
-							minDays=28;
-							break;
-						case '16':
-							minDays=13;
-							break;
-					}
-					
-					params[0] = minDays;
-					
-					var today=new Date(new Date().toDateString());
-					var nextPD1=new Date(npd1Arr[0], npd1Arr[1] - 1, npd1Arr[2]);
-					var nextPD2=new Date(npd2Arr[0], npd2Arr[1] - 1, npd2Arr[2]);
-			
-					var minDays = params[0];
-					var minMS=minDays * (1000 * 60 * 60 * 24);
-					return nextPD2.getTime() < nextPD1.getTime() + minMS;
-					
-			}, jQuery.validator.format('Date of 2nd payday may not be less than {0} days after date of 1st payday based on your pay period selection'));
-			
-			jQuery.validator.addMethod('payPeriod2Max', function(val, el, params){
-				
-					var npd1Arr= $(params[1]).val().split('-');
-					var npd2Arr= val.split('-');
-					
-					if(npd2Arr.length < 3 || npd1Arr.length < 3) {
-						return false;
-					}
-					
-					var today=new Date(new Date().toDateString());
-					var nextPD1=new Date(npd1Arr[0], npd1Arr[1] - 1, npd1Arr[2]);
-					var nextPD2=new Date(npd2Arr[0], npd2Arr[1] - 1, npd2Arr[2]);
-					
-					var maxDays = $(params[0]).val();
-					if(!maxDays) {
-						return false;
-					}
-					switch (maxDays) {
-						case '2':
-							maxDays=6;
-							break;
-						case '4':
-							maxDays=13;
-							break;
-						case '8':
-							maxDays=28;
-							break;
-						case '16':
-							maxDays=13;
-							break;
-					}
-					
-					params[0] = maxDays;
-					
-					var maxMS=maxDays * (1000 * 60 * 60 * 24);
-					return nextPD2.getTime() < nextPD1.getTime() + minMS;
-					
-			}, jQuery.validator.format('Date of 2nd payday may not be less than {0} days after date of 1st payday based on your pay period selection'));
-	
+    <script type="text/javascript">	
     	$.validator.addMethod("phoneUS", function(phone_number, element) {
 			phone_number = phone_number.replace(/\s+/g, "");
 			
@@ -197,36 +98,7 @@ $siteName = 'Cash 101';
         
         $(document).ready(function() {
         	var currentDate = new Date();
-       	 var currentTime = currentDate.getTime();        
-	      
-	      function addPay1Rule(el) {
-		      
-		      var payPeriod = $(el).val();
-		    	switch (payPeriod) {
-					case '2':
-						payPeriod=6;
-						break;
-					case '4':
-						payPeriod=13;
-						break;
-					case '8':
-						payPeriod=28;
-						break;
-					case '16':
-						payPeriod=13;
-					break;
-				}
-				
-				$('#next_pay').rules('add', {payPeriod1: payPeriod});
-        }
-        
-		  currentTime= new Date(currentTime);
-        
-		  $('#next_pay').rules('add', {payPeriod1: payPeriod});
-	    	
-		  $('#pay_period').on('change', function(){
-			  addPay1Rule(this);
-	    	});
+					var currentTime = currentDate.getTime();
 	    	
         
         <?php if ($pageName == 'page4' || $pageName == 'page5'): ?>
@@ -345,88 +217,6 @@ $siteName = 'Cash 101';
 				$("#amtindex").change(function() {
 					$("#mainForm").submit();
 				});
-			
-    	    <? }
-    	    
-    	    if (strpos($pageName,'page4') !== FALSE) { ?>
-    	    var validator = $("#page4Form").validate({
-    	    	errorPlacement: function(error, element) {
-        			error.appendTo( element.parent());
-        		},
-        		errorElement: "span",
-        		wrapper: "div",
-        		
-        		highlight: function(element, errorClass, validClass) {
-        		     $(element).addClass(errorClass).removeClass(validClass);
-        		     $(element).parents(".fieldElement").addClass("errorContainer");
-        		},
-        		
-        		unhighlight: function(element, errorClass, validClass) {
-        		    $(element).removeClass(errorClass).addClass(validClass);
-        		    $(element).parents(".fieldElement").removeClass("errorContainer");
-        		    $(element).parents(".fieldElement").addClass('validContainer');
-        		    $('.error').focus(function(){
-        		        var vIcon = $(this).parents('.fieldElement').find('.validateIcon')
-        		        var position = $(this).position();
-        		        vIcon.css({
-        		            display: 'block',
-        		            left: position.left
-        		        });
-        		    });
-        		    
-        		    $('.error').blur(function(){
-        		        var vIcon = $(this).parents('.fieldElement').find('.validateIcon')
-        		        var position = $(this).position();
-        		        vIcon.css('display', 'none');
-        		        
-        		    });
-        		},
-    	    		
-    	    	invalidHandler: function(form, validator) {
-    	    		var errors = validator.numberOfInvalids();
-    	    		if (errors) {
-    	    			var message = errors == 1
-    	    				? "<i class='fa fa-check-circle'></i>You missed 1 field. It has been highlighted"
-    	    				: "<i class='fa fa-check-circle'></i>You missed " + errors + " fields. They have been highlighted";
-    	    				
-    	    			$(".errors").html(message);
-    	    			$(".errors").slideDown("fast");
-    	    			$('html').click(function() {
-    	    			  $(".errors").slideUp("fast");
-    	    			});
-    	    			$(".errors").click(function(event){
-    	    			    event.stopPropagation();
-    	    			});
-    	    		}
-    	    	},
-    	    	
-    	    	rules: {
-    	    		dobY: {
-    	    			required: true,
-    	    		},
-    	    		
-    	    		ssn: {
-    	    			required: true,
-    	    			minlength: 4
-    	    		},
-    	    		
-    	    		amt: {
-  	    			required: true,
-  	    	    },
-  	    	    
-  	    	    'next_pay': {
-  	    	    	required: true,
-  	    	    },
-  	    	    'next_pay2': {
-  	    	    	required: true,
-  	    	    },
-  	    	    freq: {
-  	    	    	required: true,
-  	    	    }
-    	    	}
-    	    });
-    	    
-    	    <? }
     	    if ($pageName=='page5') { ?>
     	    var validator = $("#page5Form").validate({
     	    	errorPlacement: function(error, element) {
@@ -847,57 +637,6 @@ $siteName = 'Cash 101';
     	            		    }
     	            		}
     	            	});
-    	            	
-    	            	// Show tooltip on focus
-    	            	var myParent;        
-    	            	$('input').focus(function() {
-    	            	    if(myParent != this.parentNode.id){
-    	            	        $('.toolTip').fadeOut('fast');
-    	            	        myParent = this.parentNode.id;
-    	            	        $('.whatsThis').css('display', 'none');
-    	            	    }
-    	            	    $(this).siblings('.whatsThis').css('display', 'block');
-    	            	    var pos = $(this).siblings('.whatsThis').position();
-    	            	    $(this).siblings('.toolTip').css('left', pos.left + 50);
-    	            	    $(this).siblings('.toolTip').fadeIn('fast');
-    	            	    
-    	            	});
-    	            
-    	            	
-    	            	// Show tooltip when hovering over question mark icon
-    	            	$('.whatsThis').hover(
-    	            	    function () {
-    	            	        toolTipId = $(this).attr('title');
-    	            	        thisParent = $(this).parents('.fieldElement').attr('id');
-    	            	        if(thisParent != myParent){
-    	            	            $('.toolTip').fadeOut('fast');
-    	            	            $('#' + toolTipId).fadeIn('fast');
-    	            	        }
-    	            	      },
-    	            	      function () {
-    	            	          toolTipId = $(this).attr('title');
-    	            	          thisParent = $(this).parents('.fieldElement').attr('id');
-    	            	          if(thisParent != myParent){
-    	            	              $('#' + toolTipId).fadeOut('fast');
-    	            	          }
-    	            	      }
-    	            	  );
-    	            	  
-    	            	  $('.whatsThis').click(function(){
-    	            	      return false;
-    	            	  });
-    	            	  // Prevent tooltip from fading when hovering, fade when hover off of tooltip
-    	            	  $('.toolTip').hover(
-    	            	      function () {
-    	            	          $(this).stop();
-    	            	      },
-    	            	      function () {
-    	            	          thisParent = $(this).parents('.fieldElement').attr('id');
-    	            	          if(thisParent != myParent){
-    	            	              $(this).fadeOut('fast');
-    	            	          }
-    	            	      }
-    	            	  );
     	        
     	    <?php } ?>
     	    
