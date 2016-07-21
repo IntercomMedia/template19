@@ -218,7 +218,7 @@ $siteName = 'Cash 101';
 				$("#amtindex").change(function() {
 					$("#mainForm").submit();
 				});
-    	    if ($pageName=='page5') { ?>
+    	    <?php if ($pageName=='page5') { ?>
     	    var validator = $("#page5Form").validate({
     	    	errorPlacement: function(error, element) {
     	    		error.appendTo( $(element).parents(".fieldElement").find(".validateIcon") );
