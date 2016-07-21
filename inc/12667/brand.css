@@ -1,0 +1,100 @@
+/* =========================================================================
+ *
+ * Brand Colors
+ *
+ * Main.	#8CB848
+ *
+ * ========================================================================= */
+ 
+.fieldElement.valid:after,
+.offers a:hover i,
+.matching h1 .phone-number,
+.loadingPage .feature .fa,
+#mainPanel-alt .fieldElement .ico,
+#mainPanel li .fa:before,
+strong,
+a{
+    color: #8CB848;
+}
+
+.pop-container .featurette,
+.offers a,
+.loadingPage #mainPanel.loading2s strong.btn,
+#percentBar .progressBar,
+.fieldElement .fa-check,
+.checkingBtn,
+.fa.whatsThis,
+.fieldElement .fa-check,
+.completion span,
+.v3 #fields,
+.v2 .applyNow,
+button.submitBtn,
+input.submitBtn,
+.block-blurb,
+#mainPanel .fieldElement .icon {
+    background: #8CB848;
+}
+
+.block-blurb .icon-svg {
+    stroke: #fff;
+}
+
+.block-blurb.alternate .icon-svg {
+    stroke: #8CB848;
+}
+
+
+.block-blurb.alternate {
+    border-color: #8CB848;
+}
+
+/* =========================================================================
+ * Sec.	    #323F47
+ * ========================================================================= */
+
+.pop-container .featurette strong,
+.offers a i,
+.loadingPage #mainPanel header p,
+.action-column,
+#mainPanel.page5s h1 strong,
+#mainPanel-alt #fields,
+.block-leader header p,
+.block-leader h1,
+#mainPanel #certify p {
+    color: #323F47;
+}
+
+
+.popup .close,
+.offers .numb,
+.offers a:hover,
+.offers a,
+#percentBar,
+.editBtn {
+    background: #323F47;
+}
+
+#mainPanel-alt #fields {
+    border-color: #323F47;
+}
+
+@media only screen and (max-width: 959px) {
+    
+    .block-leader header {
+        background: #323F47;
+    }
+}
+
+/* =========================================================================
+ * Thrd.	#BCCFD4
+ * ========================================================================= */
+
+.featurette i,
+.featurette strong, 
+.prominent h1 {
+    color: #BCCFD4;
+}
+
+.prominent .largeFont {
+    border-color: #BCCFD4;
+}

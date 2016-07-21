@@ -36,10 +36,11 @@ $siteName = 'Cash 101';
     <meta charset="UTF-8">
     <title><?php echo (isset($PAGE[$page_name]['page_title'])) ? $PAGE[$page_name]['page_title'] : $PAGE['default']['page_title'] ;?></title>
     <meta name="description" content="<?php echo (isset($PAGE[$page_name]['meta_desc'])) ? $PAGE[$page_name]['meta_desc'] : $PAGE['default']['meta_desc']; ?>" >
-    <link href="css/base.css" rel="stylesheet" type="text/css" />
+    <link href="inc/base.css" rel="stylesheet" type="text/css" />
     
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="inc/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="inc/12667/brand.css" rel="stylesheet" type="text/css" />
+    <link href="inc/styles.css" rel="stylesheet" type="text/css" />
     <?php
        $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
        $pos_blackberry = strrpos($ua, "blackberry");

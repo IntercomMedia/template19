@@ -1,5 +1,5 @@
 
-@import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+@import url(//fonts.googleapis.com/css?family=PT+Sans:400,700);
 
 body {
     font-size: .8125em;
@@ -8,46 +8,51 @@ body {
     color: #666;
 }
 
+* {
+    box-sizing: border-box;
+}
 
-/* =========================================================================
-
-Colors:
-
-Main.	#8CB848
-Sec.	#323F47
-Thrd.	#BCCFD4
-Font.	#666
-
-
-Styles Index:
-
-1. 		Typography
-2. 		Header
-3. 		Main Panel
-4. 		Home Forms
-5. 		Features Panel
-6. 		Prominent Panel
-7. 		Page 2
-7.1 	Forms
-7.2 	Form UI
-8. 		Page 4
-9. 		Page 5
-10. 	Loading
-11.		Matching
-12. 	Footer
-13. 	Popup
-14. 	Validation
-15. 	Screen Conditionals
-
-
-============================================================================*/
 
 
 /* =========================================================================
-	
-	1. Typography
+ *
+ * Colors:
+ *
+ * Main.	#8CB848
+ * Sec.	    #323F47
+ * Thrd.	#BCCFD4
+ * Font.	#666
+ *
+ *
+ * Styles Index:
+ *
+ * 1. 		Typography
+ * 2. 		Header
+ * 3. 		Main Panel
+ * 4. 		Home Forms
+ * 5. 		Features Panel
+ * 6. 		Prominent Panel
+ * 7. 		Page 2
+ * 7.1 	Forms
+ * 7.2 	Form UI
+ * 8. 		Page 4
+ * 9. 		Page 5
+ * 10. 	Loading
+ * 11.		Matching
+ * 12. 	Footer
+ * 13. 	Popup
+ * 14. 	Validation
+ * 15. 	Screen Conditionals
+ *
+ *
+ * ============================================================================*/
 
-============================================================================*/
+
+/* =========================================================================
+ * 	
+ * 		1. Typography
+ *
+ * 		============================================================================*/
 
 h1, h2, h3, h4, h5 {
     margin-bottom: 20px;
@@ -102,10 +107,10 @@ strong{
 }
 
 /* =========================================================================
-	
-	2. Header
-
-============================================================================*/
+ * 	
+ * 		2. Header
+ *
+ * 		============================================================================*/
 
 header#mainHeader {
     margin: 0 auto;
@@ -119,8 +124,8 @@ header#mainHeader {
     font-size: 5em;
     width: 206px;
     height: 40px;
-    background-image: url(../images/logo.png);
-    background-image: url(../images/logo.svg), none; 
+    background-image: url(../img/12667/logo.png);
+    background-image: url(../img/12667/logo.svg), none; 
     background-repeat: no-repeat;
     background-size: auto 100%;
     text-indent: 900px;
@@ -137,20 +142,21 @@ header#mainHeader {
 
 
 
-/* =========================================================================
-	
-	3. Main Panel
-
-============================================================================*/
+/* =============================================================================
+ * 	
+ * 		3. Main Panel
+ *
+ * ============================================================================*/
 
 #mainPanel {
     color: #fff;
     background: #34434E;
     position: relative;
-    background: url(../images/mainPanelBg.jpg) no-repeat right;
+    background: url(../img/12667/mainPanelBg.jpg) no-repeat right;
     background-attachment: fixed;
     background-size: cover;
     overflow: hidden;
+	flex-wrap: wrap;
 }
 
 #mainPanel .container-12{
@@ -206,13 +212,287 @@ header#mainHeader {
 	color: #8CB848;
 }
 
+#mainPanel #fields {
+    margin: 20px 0;
+    width: 80%;
+    max-width: 800px;
+    padding: 60px 0;
+    margin: 0 auto;
+}
 
+#mainPanel #fields h2 {
+    color: #34434E;
+}
+
+#mainForm {
+    display: flex;
+	flex-wrap: wrap;
+}
+
+#mainPanel #fields .fieldElement {   
+    width: 32.3%;
+    margin: 0 .5% 10px .5%;
+    box-shadow: 0 0 50px rgba(0,0,0,.25);
+}
+
+
+#mainPanel #fields .fieldElement.smallField {
+    height: 40px;
+    margin: 0 3% 10px 0;
+    clear: none;
+    float: left;
+    width: 44%;
+    padding-left: 3%;
+    
+}
+
+#mainPanel .fieldElement .icon {
+    width:60px;
+    background: #8CB848;
+}
+
+#mainPanel #certify {
+    clear: both;
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    text-align: center;
+    background: rgba(137,166,196, .75);
+    font-size: .846em;
+    display: block;
+    padding: 5px;
+}
+
+#mainPanel #certify p {
+    color: #323F47;
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+#mainPanel #certify a{
+	color: #fff;
+}
+
+
+/* =============================================================================
+ * 	
+ * 		3. Main Panel Alternate
+ *
+ * ============================================================================*/
+
+#mainPanel-alt {
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+
+#mainPanel-alt .background-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/12667/main-panel-alt-bg.jpg) no-repeat right bottom;
+    background-size: cover;
+}
+
+#mainPanel-alt .background-img.alternate {
+    background-image: url(../img/12667/main-panel-alt-c-bg.jpg);
+}
+
+#mainPanel-alt .background-img::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 40%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    box-shadow: 0 0 100px 100px rgba(255, 255, 255, 0.75);
+}
+
+#mainPanel-alt .container-12 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block-leader {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.block-leader h1 {
+    font-size: 6em;
+    color: #323F47;
+    margin: 0;
+}
+
+.block-leader header p{
+    font-size: 3em;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #323F47;
+}
+
+
+.layout-features{
+    display: -webkit-box; 
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    align-self: flex-start;
+    margin: 60px auto 0 auto;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.layout-features > * {
+    margin: 0;
+    -webkit-flex: 1 auto;          /* Chrome */
+    -ms-flex: 1 auto;              /* IE 10 */
+    flex: 1 auto;
+    width: 33.33%;
+}
+
+.block-blurb {
+    background: #8CB848;
+    padding: 30px;
+    color: #fff;
+    border-right: 10px solid #fff;
+    display: flex;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Alternate Blurb Style */
+
+.block-blurb.alternate {
+    border-right: 5px solid #8CB848;
+    border-left: 5px solid #8CB848;
+    background: rgba(255, 255, 255, 0.75);
+    color: inherit;
+}
+
+.block-blurb.alternate:first-child {
+    border: none;
+    border-radius: 20px 0 0 0;
+}
+
+.block-blurb.alternate:last-child {
+    border: none;
+    border-radius: 0 20px 0 0;
+}
+
+.block-blurb.alternate .icon-svg {
+    stroke: #8CB848;
+}
+
+
+.block-blurb:first-child {
+    border-left: 10px solid #fff;
+}
+
+.block-blurb .icon {
+    display: block;
+    width: 140px;
+    margin-right: 20px;
+}
+
+.block-blurb .icon svg,
+.block-blurb .icon img{
+    width: 100%;
+}
+
+.block-blurb p,
+.block-blurb h2 {
+    margin-bottom: 0;
+}
+
+#mainPanel-alt #mainForm-alt {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#mainPanel-alt #fields {
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    border-left:  20px solid #323F47;
+}
+
+#mainPanel-alt #fields.alternate {
+    order: -1;
+    flex: 1 auto;
+    border-radius: 20px;
+}
+
+#mainPanel-alt #fields h2 {
+    text-align: center;
+    overflow: hidden;
+}
+#mainPanel-alt #fields h2 span{
+    position: relative;
+    display: inline-block;
+}
+
+#mainPanel-alt #fields h2 span::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: calc(100% + 1em);
+    width: 300%;
+    height: 50%;
+    border-bottom: 3px solid #efefef;
+}
+
+#mainPanel-alt #fields h2 span::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: calc(100% + 1em);
+    width: 300%;
+    height: 50%;
+    border-bottom: 3px solid #efefef;
+}
+
+#mainPanel-alt #fields .fieldElement {
+    width: calc(50% - 5px);
+    margin-right: 10px;
+    margin-bottom: 10px; 
+}
+
+#mainPanel-alt #fields .fieldElement:nth-child(even) {
+    margin-right: 0;
+}
+
+#mainPanel-alt #fields #emailField.fieldElement {
+    width: calc(100%);
+    margin-right: 0;
+}
+
+#mainPanel-alt .fieldElement .icon {
+    color: #8CB848;
+    font-size: 20px;
+    width: 40px;
+    margin: 0;
+}
+
+#mainPanel-alt #certify p{
+    font-size: 11px;
+}
 
 /* =========================================================================
-	
-	4. Home Forms
-
-============================================================================*/
+ * 	
+ * 		4. Home Forms
+ *
+ * ============================================================================*/
 
 label {
     font-weight: bold;
@@ -224,50 +504,18 @@ input[type="text"] {
     border: 1px solid #ccc;
 }
 
-#fields {
-    margin: 20px 0;
-    width: 80%;
-    max-width: 800px;
-    padding: 60px 0;
-    margin: 0 auto;
-}
-
-#fields h2 {
-    color: #34434E;
-}
-
-#mainForm {
-	display: flex;
-	flex-wrap: wrap;
-}
-
 #fields .fieldElement {
 	display: flex;
     background: #fff;
     height: 66px;
-    width: 32.3%;
-    margin: 0 .5% 10px .5%;
-    float: left;
-    box-shadow: 0 0 50px rgba(0,0,0,.25);
     box-sizing: border-box;
     border-radius: 13px;
     border: 3px solid rgba(67, 80, 90, 0.75);
-}
-
-#fields .fieldElement.smallField {
-    height: 40px;
-    margin: 0 3% 10px 0;
-    clear: none;
     float: left;
-    width: 44%;
-    padding-left: 3%;
-    
 }
 
 .fieldElement .icon {
-    width:60px;
     height: 60px;
-    background: #8CB848;
     float: left;
     margin: 0 4% 0 -1px;
     font-family: FontAwesome;
@@ -301,7 +549,7 @@ input[type="text"] {
     width: 100%;
     display: block;
     overflow: hidden;
-    background: url(../images/customSelect.png) no-repeat right center;
+    background: url(../img/customSelect.png) no-repeat right center;
 }
 
 .customSelect select {
@@ -332,32 +580,32 @@ input[type="text"] {
 
 
 /* 1-2 col*/
-#fields .fieldElement#lname,
-#fields .fieldElement#fname,
-#fields .fieldElement#email {
+#mainPanel #fields .fieldElement#lname,
+#mainPanel #fields .fieldElement#fname,
+#mainPanel #fields .fieldElement#emailField {
 	width: 65.6%;
 }
 
 /* 1-3 col*/
-#fields .fieldElement#amountField,
-#fields .fieldElement#ssnField,
-#fields .fieldElement#byField,
-#fields .fieldElement#zipField {
+#mainPanel #fields .fieldElement#amountField,
+#mainPanel #fields .fieldElement#ssnField,
+#mainPanel #fields .fieldElement#byField,
+#mainPanel #fields .fieldElement#zipField {
 	width: 32.3%;
 }
 
 /* 1-4 col
-#fields .fieldElement#zipField,
-#fields .fieldElement#ssnField {
-	width: 24%;
-}
-*/
+ * #fields .fieldElement#zipField,
+ * #fields .fieldElement#ssnField {
+ * 	width: 24%;
+ * 	}
+ * 	*/
 
 #amountField .icon:before {
     content: "\f155";
 }
 
-#email .icon:before {
+#emailField .icon:before {
     content: "\f0e0";
 }
 
@@ -365,8 +613,8 @@ input[type="text"] {
     content: "\f041";
 }
 
-#fname .icon:before,
-#lname .icon:before,
+#fnameField .icon:before,
+#lnameField .icon:before,
 #byField .icon:before{
 	content: '\f007';
 }
@@ -379,24 +627,6 @@ input[type="text"] {
     padding: 12px 0 12px;
 }
 
-#certify {
-    clear: both;
-    width: 90%;
-    max-width: 900px;
-    margin: 20px auto;
-    text-align: center;
-    background: rgba(137,166,196, .75);
-    font-size: .846em;
-    display: block;
-    padding: 5px;
-}
-
-#certify p {
-    color: #323F47;
-    font-size: 1em;
-    margin-bottom: 0;
-}
-
 #certify label{
 	font-weight: normal;
 }
@@ -404,10 +634,6 @@ input[type="text"] {
 #certify input {
 	display: inline-block;
 	clear: none;
-}
-
-#certify a{
-	color: #fff;
 }
 
 #certify input {
@@ -428,13 +654,275 @@ input.submitBtn {
 	margin: 0 auto;
 	padding: 20px 40px;
 	border: 5px solid #83A352;
+	cursor: pointer;
 }
 
-/* =========================================================================
-	
-	5. Features Panel
 
-============================================================================*/
+/* =========================================================================
+ * 	
+ * 		4.2 Home Forms V2
+ *
+ * ============================================================================*/
+.v2 #fields {
+	width: 100%;
+	margin: 0;
+	padding:0 0 80px 0;
+	position: relative;
+	z-index: 1;
+}
+
+.v2 #certify{
+	width: 92.5%;
+	margin: 20px 0;
+}
+.v2 #fields .fieldElement {
+	width: 92.5%;
+}
+
+
+
+.v2 .fieldElement .icon{
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+}
+
+.v2 .fieldElement .icon {
+	width: 10%;
+}
+
+
+@media only screen and (min-width: 960px) {
+	.v2 #fields #zipField.fieldElement,
+	.v2 #fields #ssnField.fieldElement,
+	.v2 #fields #lnameField.fieldElement,
+	.v2 #fields #fnameField.fieldElement{
+		width: 45%;
+	}
+	
+	.v2 #fields #zipField.fieldElement .icon,
+	.v2 #fields #ssnField.fieldElement .icon,
+	.v2 #fnameField.fieldElement .icon,
+	.v2 #lnameField.fieldElement .icon {
+		width: 20%;
+		margin-right: 8%;
+	}
+	
+	.v2 #fields #zipField.fieldElement .validateField,
+	.v2 #fields #ssnField.fieldElement .validateField,
+	.v2 #fields #fnameField.fieldElement .validateField,
+	.v2 #fields #lnameField.fieldElement .validateField{
+		width: 72%;
+	}
+	
+	.v2 #fields .fieldElement {
+		height: 50px;
+	}
+	.v2 #fields .fieldElement input{
+	padding: 15px 0;
+}
+
+}
+
+.v2 .applyNow{
+	background: #8CB848;
+	padding: 30px;
+	border-radius: 15px;
+	color: #fff;
+	text-align: center;
+	width: 92.5%;
+	margin: 80px 0 20px 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	z-index: 0;
+	position: relative;
+	border-top: 3px solid rgba(67,80,90,0.75);
+
+	border-bottom: 3px solid rgba(67,80,90,0.75);
+}
+
+.v2 .applyNow label{
+	color: #fff;
+	margin: 0;
+	 font-size: 1.538em;
+    margin-bottom: .5em;
+	 display: block;
+}
+
+.v2 .applyNow select{
+	    height: 40px;
+    font-size: 1.25em;
+	line-height: 40px;
+	vertical-align: middle;
+	border-radius: 6px;
+	border: 1px solid #cccccc;
+	padding: 0;
+	color: #777777;
+	box-shadow: inset -1px 1px 2px rgba(0,0,0,0.2);
+	box-sizing:content-box;
+	-ms-box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+	margin: 0 8px;
+	width: 100%;
+}
+
+#mainPanel.v2 h1{
+	text-align: left;
+	font-size: 3em;
+	text-shadow: 0 0 40px rgba(0,0,0,.5);
+}
+#mainPanel.v2 ul{
+	display: block;
+}
+
+#mainPanel.v2 ul li{
+	width: auto;
+	display: block;
+	margin: 0 0 20px  0;
+	width: 100%;
+}
+
+#mainPanel.v2:before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+	background: rgba(0,0,0,.1);
+}
+
+
+/* =========================================================================
+ * 	
+ * 		4.3 Home Forms V3
+ *
+ * ============================================================================*/
+.v3 #fields {
+	box-sizing: border-box;
+	width: 100%;
+	z-index: 1;
+	background: #8CB848;
+	box-shadow: 0 0 50px rgba(0,0,0,0.5);
+	padding: 30px;
+}
+
+.v3 #certify{
+	width: 100%;
+	margin: 20px 0;
+	background: none;
+}
+.v3 #fields .fieldElement {
+	width: 100%;
+	border: none;
+}
+
+.v3 .fieldElement .icon {
+	background: #34434E;
+}
+
+#birthyear .icon:before{
+	content: '\f133';
+}
+
+@media only screen and (min-width: 960px) {
+	.v3 #fields #zipField.fieldElement,
+	.v3 #fields #ssnField.fieldElement
+		width: 50%;
+	}
+	
+	.v3 #fields #zipField.fieldElement .validateField,
+	.v3 #fields #ssnField.fieldElement .validateField,
+	.v3 #fields #fnameField.fieldElement .validateField,
+	.v3 #fields #lnameField.fieldElement .validateField{
+		width: 72%;
+	}
+
+}
+
+
+@media only screen and (max-width: 960px) and (min-width: 724px){
+	.v3 input.submitBtn{
+		cursor: pointer;
+		font-size: 12px;
+	}
+}
+.v3 .applyNow{
+	text-align: center;
+	margin: 0 0 20px 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	position: relative;
+}
+
+.v3 .applyNow label{
+	color: #fff;
+	margin: 0;
+	 font-size: 1.538em;
+    margin-bottom: .5em;
+	 display: block;
+}
+
+.v3 .applyNow select{
+	height: 40px;
+    font-size: 1.25em;
+	line-height: 40px;
+	vertical-align: middle;
+	border-radius: 6px;
+	border: 1px solid #cccccc;
+	padding: 0;
+	color: #777777;
+	box-sizing:content-box;
+	-ms-box-sizing:content-box;
+	-moz-box-sizing:content-box;
+	-webkit-box-sizing:content-box;
+	border: none;
+	width: 100%;
+}
+
+#mainPanel.v3 h1{
+	text-align: left;
+	font-size: 2em;
+	text-shadow: 0 0 40px rgba(0,0,0,.5);
+}
+#mainPanel.v3 ul{
+	display: block;
+}
+
+#mainPanel.v3 ul li{
+	width: auto;
+	display: block;
+	margin: 0 0 20px  0;
+	width: 100%;
+}
+
+#mainPanel.v3:before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+	background: rgba(0,0,0,.1);
+}
+
+.v3 input.submitBtn{
+	cursor: pointer;
+	background: #34434E;
+	border: none;
+}
+
+
+/* =========================================================================
+ * 	
+ * 		5. Features Panel
+ *
+ * ============================================================================*/
 
 #featuresPanel {
 	padding: 40px 0;
@@ -480,8 +968,8 @@ input.submitBtn {
 	font-size: 6em;
 	text-align: center;
 	line-height: 140px;
-	background-image: url(../images/icoComp.png);
-	background-image: url(../images/icoComp.svg), none;
+	background-image: url(../img/12667/icoComp.png);
+	background-image: url(../img/12667/icoComp.svg), none;
 	background-repeat: no-repeat;
 	background-position: center center;
 	color: #fff;
@@ -492,12 +980,12 @@ input.submitBtn {
 }
 
 .feature .icon2{
-	background-image: url(../images/icoEnv.png);
-	background-image: url(../images/icoEnv.svg),none;
+	background-image: url(../img/12667/icoEnv.png);
+	background-image: url(../img/12667/icoEnv.svg),none;
 }
 .feature .icon3{
-	background-image: url(../images/icoWallet.png);
-	background-image: url(../images/icoWallet.svg), none;
+	background-image: url(../img/12667/icoWallet.png);
+	background-image: url(../img/12667/icoWallet.svg), none;
 }
 
 .feature h2 {
@@ -511,26 +999,30 @@ input.submitBtn {
 /* @end */
 
 /* =========================================================================
-	
-	6. Prominent Panel
-
-============================================================================*/
+ * 	
+ * 		6. Prominent Panel
+ *
+ * 		============================================================================*/
 
 .prominent {
     color: #fff;
     overflow: hidden;
-    background: #E9E1CA url(../images/prominentBg.jpg) fixed center;
+    background: #E9E1CA url(../img/12667/prominentBg.jpg) fixed center;
     background-size: cover;
     padding: 60px 0;
     margin-bottom: 40px;
+}
+
+.prominent.alternative {
+    background-image: url(../img/12667/prominentBg2.jpg);
 }
 
 .prominent .iconCheck{
 	height: 100px;
 	width: 100px;
 	float: left;
-	background-image: url(../images/icoCheck.png);
-	background-image: url(../images/icoCheck.svg), none;
+	background-image: url(../img/12667/icoCheck.png);
+	background-image: url(../img/12667/icoCheck.svg), none;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 	margin: 0 20px 0 0;
@@ -566,10 +1058,10 @@ input.submitBtn {
 
 
 /* =========================================================================
-	
-	7. Page 2
-
-============================================================================*/
+ * 	
+ * 		7. Page 2
+ *
+ * 		============================================================================*/
 
 .page2{
 	background: #F7F7F7;
@@ -606,8 +1098,8 @@ input.submitBtn {
 #congratulationsPanel .iconClock{
 	height: 80px;
 	width: 80px;
-	background: url(../images/icoClock.png);
-	background: url(../images/icoClock.svg), none;
+	background: url(../img/12667/icoClock.png);
+	background: url(../img/12667/icoClock.svg), none;
 	background-size: 100% auto;
 	float: left;
 	margin: 0 20px 0 0;
@@ -657,10 +1149,10 @@ input.submitBtn {
 
 
 /* =========================================================================
-	
-	7.1 Forms
-
-============================================================================*/
+ * 	
+ * 		7.1 Forms
+ *
+ * 		============================================================================*/
 
 h1.headline{
 	font-size: 2.5em;
@@ -792,14 +1284,14 @@ h1.headline{
 }
 
 .page2 .fieldElement input[type="text"].date{
-	background-image: url(../images/calendar-o.png);
+	background-image: url(../img/calendar-o.png);
 	background-repeat: no-repeat;
 	background-position: 10px center;
 	text-indent: 40px;
 }
 
 .page2 .fieldElement input[type="text"]#ssn{
-	background-image: url(../images/lock.png);
+	background-image: url(../img/lock.png);
 	background-repeat: no-repeat;
 	background-position: 10px center;
 	text-indent: 40px;
@@ -866,10 +1358,10 @@ a.noBankAccount:hover{
 }
 
 /* =========================================================================
-	
-	7.2 Form UI
-
-============================================================================*/
+ * 	
+ * 		7.2 Form UI
+ *
+ * 		============================================================================*/
 
 
 .checkingBtn,
@@ -930,10 +1422,10 @@ a.noBankAccount:hover{
 }
 
 /* =========================================================================
-	
-	8. Page 4
-
-============================================================================*/
+ * 	
+ * 		8. Page 4
+ *
+ * 		============================================================================*/
 
 .page2 #mainHeader #seal{
 	display: inline-block;
@@ -948,6 +1440,7 @@ a.noBankAccount:hover{
 }
 
 .page4 input.submitBtn{
+	cursor: pointer;
 	float: none;
 	display: inline-block;
 	margin: 20px 0 0 0;
@@ -980,10 +1473,10 @@ a.noBankAccount:hover{
 
 
 /* =========================================================================
-	
-	8.1 Page 4s
-
-============================================================================*/
+ * 	
+ * 		8.1 Page 4s
+ *
+ * 		============================================================================*/
 
 
 .page4s {
@@ -1044,40 +1537,39 @@ a.noBankAccount:hover{
 }
 
 .page4s#mainPanel input.submitBtn {
+	cursor: pointer;
 	min-width: 50%;
 	margin-bottom: 10px;
 }
 
 
 /* =========================================================================
-	
-	9. Page 5
-
-============================================================================*/
-
-
+ * 	
+ * 		9. Page 5
+ *
+ * 		============================================================================*/
 .page5 #mainPanel.page5 h1 span:nth-child(2){
 	font-size: .7em;
 	width: 80%;
 }
 
-.page5 #fields{
+#mainPanel.page5 #fields{
 	padding-top: 10px;
 	text-align: center;
 }
 
-.page5 #fields .fieldElement{
+#mainPanel.page5 #fields .fieldElement{
 	margin-bottom: 10px;
 	width: 49%;
 	box-sizing: border-box;
 }
 
-.page5 #fields .validateField{
+#mainPanel.page5 #fields .validateField{
 	margin-left: 10%;
 	width: 90%;
 }
 
-.page5 #fields #amountField{
+#mainPanel.page5 #fields #amountField{
 	width: 99%;
 	margin-bottom: 10px;
 	float: none;
@@ -1093,20 +1585,20 @@ a.noBankAccount:hover{
 	padding: 15px 0;
 }
 
-.page5 .fieldElement.valid:after,
-.page5 .fieldElement.error:after {
+#mainPanel.page5 .fieldElement.valid:after,
+#mainPanel.page5 .fieldElement.error:after {
     top: 10px;
     right: 10px;
 }
 
-.page5 .fieldElement.selecter.valid:after,
-.page5 .fieldElement.selecter.error:after {
+#mainPanel.page5 .fieldElement.selecter.valid:after,
+#mainPanel.page5 .fieldElement.selecter.error:after {
     right: 35px;
     top: 10px;
 }
 
-.page5 .feature .icon,
-.page4 .feature .icon{
+#mainPanel.page5 .feature .icon,
+#mainPanel.page4 .feature .icon{
 	float: left;
 	height: 100px;
 	width: 100px;
@@ -1128,25 +1620,30 @@ a.noBankAccount:hover{
 }
 
 .page5 input.submitBtn{
+	cursor: pointer;
 	margin-top: 20px;
-}
-
-.page5 #fields #freqField{
-	width: 32.333%;
-	box-sizing: border-box;
-}
-
-.page5 #fields #pdField,
-.page5 #fields #pd2Field {
-	width: 49%;
 }
 
 
 /* =========================================================================
-	
-	9.1 Page 5s
+ * 	
+ * 		9. Page 5 alt
+ *
+ * 		============================================================================*/
 
-============================================================================*/
+#mainPanel.page52 #fields #freqField,
+#mainPanel.page52 #fields #pdField,
+#mainPanel.page52 #fields #pd2Field {
+	width: 32.333%;
+	box-sizing: border-box;
+}
+
+
+/* =========================================================================
+ * 	
+ * 		9.1 Page 5s
+ *
+ * 		============================================================================*/
 
 
 #mainPanel.page5s {
@@ -1170,7 +1667,7 @@ a.noBankAccount:hover{
 	position: absolute;
 	top:17.25em;
 	right: calc(100% + 1em);
-	background: url(../images/arrow.svg) no-repeat left center;
+	background: url(../img/arrow.svg) no-repeat left center;
 	background-size: auto 100% ;
 	
 }
@@ -1182,15 +1679,16 @@ a.noBankAccount:hover{
 	position: absolute;
 	top:17.25em;
 	left: calc(100% - 4em);
-	background: url(../images/arrow.svg) no-repeat right center;
+	background: url(../img/arrow.svg) no-repeat right center;
 	background-size: auto 100% ;
 	
 }
 
 #mainPanel.page5s h1 {
-	font-size: 5em;
+	font-size: 4.2em;
 	text-transform: uppercase;
 	text-align: left;
+	margin-top: 30px;
 }
 
 #mainPanel.page5s h1 strong {
@@ -1199,6 +1697,7 @@ a.noBankAccount:hover{
 
 
 #mainPanel.page5s .submitBtn {
+	cursor: pointer;
 	line-height: 1;
 	vertical-align: middle;
 	min-width: 40%;
@@ -1286,12 +1785,6 @@ a.noBankAccount:hover{
 		width: 100%;
 		margin-top: 20px;
 		text-align: center;
-	}		/* 1-3 col*/
-	#fields .fieldElement#amountField,
-	#fields .fieldElement#ssnField,
-	#fields .fieldElement#byField,
-	#fields .fieldElement#zipField {
-		width: 100%;
 	}
 }
 
@@ -1319,14 +1812,14 @@ a.noBankAccount:hover{
 	.action-column label {
 		font-size: 12px;
 	}
-
-}
+	
+} 
 
 /* =========================================================================
-	
-	10. Loading
-
-============================================================================*/
+ * 	
+ * 		10. Loading
+ *
+ * 		============================================================================*/
 
 .loadingPage #mainPanel {
     min-height: 300px;
@@ -1369,6 +1862,11 @@ a.noBankAccount:hover{
     width: 100px;
     margin-bottom: 20px;
 }
+
+.loading {
+    background: url(../img/ajax-loader.gif) no-repeat center center;
+}
+
 
 .loadingPage .feature .fa{
 	font-size: 80px;
@@ -1449,10 +1947,10 @@ a.noBankAccount:hover{
 
 
 /* =========================================================================
-	
-	10.1 Loading 2s
-
-============================================================================*/
+ * 	
+ * 		10.1 Loading 2s
+ *
+ * 		============================================================================*/
 
 #mainPanel.loading2s {
 	background-size: cover;
@@ -1476,13 +1974,13 @@ a.noBankAccount:hover{
 	margin: 30px 0;
 }
 /* =========================================================================
-	
-	11. Matching
-
-============================================================================*/
+ * 	
+ * 		11. Matching
+ *
+ * 		============================================================================*/
 
 .matching .prominent{
-	background-image: url(../images/template-19-decline-bg.jpg);
+	background-image: url(../img/template-19-decline-bg.jpg);
 	position: relative;
 }
 
@@ -1626,11 +2124,12 @@ a.noBankAccount:hover{
 	font-size: 1.25em
 }
 
-/* =========================================================================
-	
-	11.1 Popup Page
 
-============================================================================*/
+/* =========================================================================
+ * 	
+ * 		11.1 Popup Page
+ *
+ * 		============================================================================*/
 
 .pop .wrapper{
 	display: flex;
@@ -1650,7 +2149,7 @@ a.noBankAccount:hover{
 	text-align: center;
 	position: relative;
 	padding: 60px 0 0 0;
-	background: url(../images/template-19-pop-bg.png);
+	background: url(../img/template-19-pop-bg.png);
 	background-size: cover;
 }
 
@@ -1677,13 +2176,13 @@ a.noBankAccount:hover{
 .pop-container .offers {
 	padding: 20px;
 	margin: 0;
-	background: url(../images/template-19-money-bg.jpg) right bottom no-repeat;
+	background: url(../img/template-19-money-bg.jpg) right bottom no-repeat;
 }
 
 .pop-container .offers li {
 	border-bottom: 1px solid #ddd;
 	margin-bottom: 10px;
-	max-width: 350px;
+	max-width: 450px;
 }
 
 .pop-container .offers a {
@@ -1707,10 +2206,10 @@ a.noBankAccount:hover{
 }
 
 /* =========================================================================
-	
-	12. Footer
-
-============================================================================*/
+ * 	
+ * 		12. Footer
+ *
+ * 		============================================================================*/
 
 footer {
     clear: both;
@@ -1738,10 +2237,10 @@ footer .disclaimer {
 
 
 /* =========================================================================
-	
-	13. Popup
-
-============================================================================*/
+ * 	
+ * 		13. Popup
+ *
+ * 		============================================================================*/
 
 
 .popup {
@@ -1776,11 +2275,13 @@ footer .disclaimer {
 }
 
 
-/* =========================================================================
-	
-	14. Validation
 
-============================================================================*/
+
+/* =========================================================================
+ * 	
+ * 		14. Validation
+ *
+ * 		============================================================================*/
 
 .errors{
 	font-size: 1.25em;
@@ -1906,10 +2407,10 @@ span.validateIcon div:after {
 
 
 /* =========================================================================
-	
-	15. Screen Conditionals
-
-============================================================================*/
+ * 	
+ * 		15. Screen Conditionals
+ *
+ * 		============================================================================*/
 
 
 @media only screen and (min-height: 1150px){
@@ -1995,6 +2496,26 @@ span.validateIcon div:after {
 
 @media only screen and (max-width: 959px) {
     
+    .container-12 .block-leader {
+        width: 100%;
+    }
+    
+    .block-leader header {
+        background: #323F47;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .block-leader h1 {
+        font-size: 3em;
+        color: #fff;
+    }
+    
+    .block-leader header p{
+        font-size: 2em;
+        color: #fff;
+    }
+    
     .prominent h1{
     	font-size: 3em;
     }
@@ -2047,7 +2568,7 @@ span.validateIcon div:after {
 
     
     #fields .fieldElement{
-	    height: 44px;
+	    height: 40px;
 	    border-width: 2px;
 	    border-radius: 5px;
     }
@@ -2058,8 +2579,8 @@ span.validateIcon div:after {
 	} 
     
     #fields .fieldElement .icon{
-	    height: 40px;
-	    width:15%;
+	    height: 36px;
+	    width:36px;
 	    line-height: 40px;
 	    font-size: 20px;
 	    border-radius: 5px 0 0 5px;
@@ -2080,6 +2601,7 @@ span.validateIcon div:after {
     
     button.submitBtn,
     input.submitBtn{
+		cursor: pointer;
 	    margin-bottom: 20px;
     }
     
@@ -2157,14 +2679,43 @@ span.validateIcon div:after {
 	    
     }
 	
-	.page5 #fields #amountField.fieldElement,
-	.page5 #fields .fieldElement,
-	#fields .fieldElement{
+	#mainPanel.page52 #fields #freqField,
+    #mainPanel.page52 #fields #pdField,
+    #mainPanel.page52 #fields #pd2Field,
+	#mainPanel #fields .fieldElement#amountField, 
+	#mainPanel #fields .fieldElement#ssnField, 
+	#mainPanel #fields .fieldElement#byField, 
+	#mainPanel #fields .fieldElement#zipField,
+	#mainPanel.page5 #fields #amountField.fieldElement,
+	#mainPanel.page5 #fields .fieldElement,
+	#mainPanel #fields .fieldElement{
 		float: none;
-		width: auto;
-		display: block;
+		width: 100%;
+		display: flex;
 		margin-bottom: 10px;
 	}
+	
+	.layout-features > *:first-child,
+	.layout-features > * {
+    	width: 100%;
+    	border: none;
+    	border-bottom: 5px solid #fff;
+    }
+    
+    .block-blurb.alternate:first-child {
+        border-radius: 10px 10px 0 0;
+    }
+    .block-blurb.alternate:last-child {
+        border-radius: 0;
+    }
+    .block-blurb.alternate {
+        border: none;
+    }
+    
+    #mainPanel-alt #fields.alternate {
+        order: 1;
+        border-radius: 0 0 10px 10px;
+    }
 	
 	.page2 .fieldElement{
 		padding: 0;
@@ -2193,6 +2744,7 @@ span.validateIcon div:after {
     }
     
     input.submitBtn{
+		cursor: pointer;
 	    font-size: 1.25em;
     }
     
@@ -2271,12 +2823,7 @@ span.validateIcon div:after {
 	.page4s #certifyField {
 		margin: 10px auto;
 	}
-	
-	#fields .fieldElement#lname,
-	#fields .fieldElement#fname,
-	#fields .fieldElement#email{
-		width: 100%;
-	}
+
 	.page52 #fields #freqField,
 	.page52 #fields #pdField,
 	.page52 #fields #pd2Field {
@@ -2337,8 +2884,14 @@ span.validateIcon div:after {
 	}
 	
 	.offers a{
-		font-size: 1.5em
-	}
+		font-size: 0.9em;
+    	    line-height: 35px;
+    	}
+
+    	.offers i,
+    	.offers .numb{
+        	line-height: 35px;
+  	  }
 	
 	.matching h1 .phone-number strong{
 		display: block;
@@ -2356,13 +2909,8 @@ span.validateIcon div:after {
 	.page4 #congratulationsPanel {
 		position: static !important;
 	}
-	 #fields #mainForm .fieldElement{
+    
+    #mainPanel #fields #mainForm .fieldElement{
              width: 100%;
-       }
-}
-
-
-/* Google Auto Complete */
-
-.pac-container {
+    }
 }
