@@ -291,7 +291,7 @@ $siteName = 'Cash 101';
     	    	}
     	    });
     	    
-    	    <? }
+    	    <?php }
     	    if ($pageName=='page2') { ?>
     	    	        $('input, textarea, select').blur(function(){
 					    	var valid = $('.validContainer').length;
