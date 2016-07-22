@@ -295,12 +295,12 @@ header#mainHeader {
     position: absolute;
     left: 0;
     top: 0;
-    background: url(../img/12667/main-panel-alt-bg.jpg) no-repeat right bottom;
+    background: url(../img/12667/mainPanelBg-v2.jpg) no-repeat right bottom;
     background-size: cover;
 }
 
 #mainPanel-alt .background-img.alternate {
-    background-image: url(../img/12667/main-panel-alt-c-bg.jpg);
+    background-image: url(../img/12667/mainPanelBg-v3.jpg);
 }
 
 #mainPanel-alt .background-img::after {
@@ -1014,7 +1014,7 @@ input.submitBtn {
 }
 
 .prominent.alternative {
-    background-image: url(../img/12667/prominentBg2.jpg);
+    background-image: url(../img/12667/prominentBg-v2.jpg);
 }
 
 .prominent .iconCheck{
