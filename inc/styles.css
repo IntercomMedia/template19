@@ -332,9 +332,6 @@ header#mainHeader {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
 }
 
 .block-leader {
@@ -2722,6 +2719,13 @@ span.validateIcon div:after {
 		display: flex;
 		margin-bottom: 10px;
 	}
+	
+	    
+    #mainPanel-alt .container-12 {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
 	
 	.layout-features > *:first-child,
 	.layout-features > * {
