@@ -281,12 +281,26 @@ header#mainHeader {
  * ============================================================================*/
 
 #mainPanel-alt {
-    min-height: calc(100vh - 100px);
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     position: relative;
     overflow: hidden;
+    padding-top: 40px;
+}
+
+@media only screen and (min-width: 960px) {
+    #mainPanel-alt{
+        height: calc(100vh - 100px);
+        min-height: 700px;
+        max-height: 900px;
+    }
 }
 
 #mainPanel-alt .background-img {
@@ -315,14 +329,23 @@ header#mainHeader {
 }
 
 #mainPanel-alt .container-12 {
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
 .block-leader {
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
-    justify-content: flex-end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
 }
 
 .block-leader h1 {
@@ -554,7 +577,7 @@ input[type="text"] {
 
 .customSelect select {
     background: transparent;
-    width: 110%;
+    width: 120%;
     padding: 15px 0 15px 0;
     line-height: 1;
     border: 0;
@@ -2495,7 +2518,13 @@ span.validateIcon div:after {
 }
 
 @media only screen and (max-width: 959px) {
+     
+    #mainPanel-alt #fields.alternate {
+        order: 1;
+        border-radius: 0 0 10px 10px;
+    }
     
+        
     .container-12 .block-leader {
         width: 100%;
     }
@@ -2678,7 +2707,6 @@ span.validateIcon div:after {
     .page5 #mainPanel.page5 h1 span:nth-child(2) {
 	    
     }
-	
 	#mainPanel.page52 #fields #freqField,
     #mainPanel.page52 #fields #pdField,
     #mainPanel.page52 #fields #pd2Field,
@@ -2712,10 +2740,19 @@ span.validateIcon div:after {
         border: none;
     }
     
-    #mainPanel-alt #fields.alternate {
-        order: 1;
-        border-radius: 0 0 10px 10px;
+    #mainPanel-alt {
+        padding-top: 0;
     }
+    
+    #mainPanel-alt .container-12 {
+        width: 100%;
+    }
+    
+    
+	#mainPanel-alt #fields {
+    	border-left: none;
+    	padding: 15px;
+	}
 	
 	.page2 .fieldElement{
 		padding: 0;
@@ -2844,6 +2881,10 @@ span.validateIcon div:after {
     
     #mainPanel h1 span:first-child{
 	    font-size: 1.5em;
+    }
+	
+	.prominent h1{
+    	font-size: 2em;
     }
 	
 	.repeat #congratulationsPanel{

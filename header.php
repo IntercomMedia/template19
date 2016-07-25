@@ -39,8 +39,8 @@ $siteName = 'Cash 101';
     <link href="inc/base.css" rel="stylesheet" type="text/css" />
     
     <link href="inc/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="inc/12667/brand.css" rel="stylesheet" type="text/css" />
     <link href="inc/styles.css" rel="stylesheet" type="text/css" />
+    <link href="inc/12667/brand.css" rel="stylesheet" type="text/css" />
     <?php
        $ua = strtolower($_SERVER['HTTP_USER_AGENT']);
        $pos_blackberry = strrpos($ua, "blackberry");

@@ -83,6 +83,14 @@ input.submitBtn,
     .block-leader header {
         background: #323F47;
     }
+    
+    .block-leader h1 {
+        color: #fff;
+    }
+    
+    .block-leader header p{
+        color: #fff;
+    }
 }
 
 /* =========================================================================
