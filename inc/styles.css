@@ -364,9 +364,6 @@ header#mainHeader {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    align-self: flex-start;
     margin: 60px auto 0 auto;
     position: relative;
     z-index: 1;
@@ -2881,6 +2878,11 @@ span.validateIcon div:after {
 	#mainPanel h1 {
 		padding-top: 10px;
 		font-size: 1.5em;
+    }
+    
+    .layout-features{
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
     }
     
     #mainPanel h1 span:first-child{

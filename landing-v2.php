@@ -157,8 +157,8 @@ require("header.php");
         		    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 131 128"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><title>shutterstock_262793753</title><path class="cls-1 icon-svg" d="M41.25,40.09h0a8.37,8.37,0,0,1,11.49,2.7L64.46,61.73a8.32,8.32,0,0,1,3.76-5.35h0A8.37,8.37,0,0,1,79,58.11a8.35,8.35,0,0,1,3.93-6.51h0a8.37,8.37,0,0,1,10.78,1.73,8.35,8.35,0,0,1,3.93-6.51h0c3.9-2.42,9.28-1.32,11.49,2.7l16.22,29.62c13.19,24.08-12.27,55-37.86,43L43.09,101.17a8.37,8.37,0,0,1-4-11.11c3.87-2.4,12.21-3.47,16.39-1.5l8.41,4L38.55,51.58a8.37,8.37,0,0,1,2.7-11.49h0Z"/><path class="cls-1 icon-svg" d="M36.45,68.58A24.23,24.23,0,1,1,68.46,42"/><path class="cls-1 icon-svg" d="M26.68,84.07A42.39,42.39,0,1,1,85.44,34.76"/></svg>
         		</i>
     			<header>
-    			    <h2>Online Process</h2>
-                    <p>Our simple two-step form takes minutes to complete, which means you'll get the money you need in less time.</p>
+    			    <h2>How it Works</h2>
+					<p>Complete our simple form and we will match your information with a lender based on their requirements.</p>
     			</header>
 			</div>
 			<div class="block-blurb">
@@ -173,8 +173,8 @@ require("header.php");
         		        <path class="cls-1 icon-svg" d="M64.51,36.79A39.45,39.45,0,1,1,25.07,76.24,39.45,39.45,0,0,1,64.51,36.79h0Z"/></svg>
         		</i>
     			<header>
-        			<h2>Quick Approval</h2>
-					<p>You can get approved for a loan regardless of your credit score or credit history!</p>
+        			<h2>Why Choose Us</h2>
+					<p>By having one of the largest nationwide lenders, we hlpe you get the funds you need when you need it most.</p>
     			</header>
 			</div>
 			<div class="block-blurb">
@@ -182,8 +182,8 @@ require("header.php");
         		    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 131 128"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><title>shutterstock_262793753</title><polyline class="cls-1 icon-svg" points="33.06 24.93 33.06 127.16 97.94 127.16 97.94 24.93"/><path class="cls-1 icon-svg" d="M86.61,65c0-8.74-9.45-15.84-21.11-15.84S44.39,56.22,44.39,65,53.84,80.8,65.5,80.8,86.61,73.71,86.61,65h0Z"/><path class="cls-1" d="M95.08,104.5A19.53,19.53,0,0,0,75.55,124"/><path class="cls-1 icon-svg" d="M35.92,104.5A19.53,19.53,0,0,1,55.45,124"/><path class="cls-1 icon-svg" d="M69.59,96.67a4.09,4.09,0,1,0-4.09,4.09,4.09,4.09,0,0,0,4.09-4.09h0Z"/><path class="cls-1 icon-svg" d="M69.59,33.31A4.09,4.09,0,1,0,65.5,37.4a4.1,4.1,0,0,0,4.09-4.09h0Z"/><path class="cls-1 icon-svg" d="M98.43,41.19h10.09a4.06,4.06,0,0,0,4-4v-8.6a4.07,4.07,0,0,0-4-4h-86a4.08,4.08,0,0,0-4,4v8.6a4.07,4.07,0,0,0,4,4H32.56"/><path class="cls-1 icon-svg" d="M32.56,62.3H7.4a5.28,5.28,0,0,1-5.22-5.22v-51A5.24,5.24,0,0,1,7.4.84H123.6a5.28,5.28,0,0,1,5.22,5.22v51a5.32,5.32,0,0,1-5.22,5.22H98.43"/></svg>
         		</i>
     			<header>
-        			 <h2>Get Your Funds</h2>
-                     <p>Cash $100 - $1,000 will be wired to your back account by the next business day after approval.</p>
+        			 <h2>Fast Loan Approval</h2>
+                     <p>your request will quickly be matched with lenders after submission. If your loan is approved, the lender will display approved loan amount, rates & fees, and loan terms.</p>
     			</header>
 			</div>
 		</div>
