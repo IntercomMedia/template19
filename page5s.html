@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Cash101.co - Quick & Easy online process for Cash Loans</title>
+	<meta name="description" content="Cash101.co - Helping you to get the money you need now! Our lenders provide fast loans online!">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<link type="text/css" rel="stylesheet" href="inc/base.css" />
+	<link type="text/css" rel="stylesheet" href="inc/font-awesome.css" />
+	<link type="text/css" rel="stylesheet" href="inc/styles.css" />
+	<script type="text/javascript" src="inc/jquery.min.js"></script>
+	<script type="text/javascript" src="inc/jquery.placeholder.min.js"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="inc/html5.js"></script>
+	<![endif]-->
+	<script type="text/javascript" src="inc/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="inc/jquery.sticky.js"></script>
+	<script type="text/javascript" src="inc/jquery.parallax.js"></script>
+	<script type="text/javascript" src="inc/datetime.js"></script>
+	<script type="text/javascript" src="inc/moment.js"></script>
+	<script type="text/javascript" src="inc/pikaday.js"></script>
+	<script type="text/javascript">
+		$.validator.addMethod("phoneUS", function(phone_number, element) {
+			phone_number = phone_number.replace(/\s+/g, "");
+			return this.optional(element) || phone_number.length > 9 &&
+				phone_number.match(/^(\+?1-?)?(\([2-9]([02-9]\d|1[02-9])\)|[2-9]([02-9]\d|1[02-9]))-?[2-9]([02-9]\d|1[02-9])-?\d4$/);
+		}, "Please specify a valid phone number");
+
+		function popup(content) {
+			var content = '<img src="'+ content +'"/>'
+			var template = '<div class="popup"><a class="close" href="#">X</a><div class="inner"> ' + content + '</div></div>'
+			if ($('.popup').length < 1) {
+				$('body').append(template);
+				var windowH = $(window).height();
+				var windowW = $(window).width();
+				content = $('.popup');
+				content.fadeIn('fast');
+
+				content.css({
+					left: ((windowW - content.outerWidth())/2),
+					top: ((windowH - content.outerHeight())/2)
+				});			
+				
+				$('.popup .close').click(function(){
+					$(this).parent().fadeOut('fast', function(){
+						$(this).remove();
+					});
+					return false;
+				});
+			}
+			return false;
+		}
+
+		$(document).ready(function() {
+// Initialize placeholder
+			if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+				$('#mainPanel').parallax("center", .15, false);
+				$('.prominent').parallax("center", .15, false);
+				$('#congratulationsPanel').parallax("center", .15, false);
+				$('#infoPanels').parallax("right", .15, true);
+				$('.prominent header .icon').parallax("right", .26, true);
+				$("#congratulationsPanel").sticky({ topSpacing: 0 });
+			}
+
+			$('input, textarea').placeholder();
+
+		});
+	</script>
+</head>
+<body class="page5 page5s">
+<div class="wrapper">
+	<header id="mainHeader">
+		<div class="container-12">
+			<a href="/" class="logo">Cash101.co</a>
+			<div id="seal">
+				<img src="img/12667/ssl_seal.png" alt="256 Bit SSL Secure"/>
+			</div>
+		</div>
+	</header>
+	<div id="mainPanel" class="parallax page5s">
+		<div class="container-12">
+			<header>
+				<h1>We have your <br><strong>$100 - $1000</strong> <br>Cash Request Ready</h1>
+			</header>
+			<div class="action-column">
+				<form id="mainForm" method="post" action="/gateway-1/" novalidate="novalidate" target="_blank">
+					<h3>Click below to re-submit your loan request</h3>
+					<div id="certify">
+						<p><input type="checkbox" id="certifyCheckBox" name="option" value="1" CHECKED>
+						<label for="certifyCheckBox">I certify that I am a U.S. Resident over the age of 18, I agree to the <a href="javascript:{}" onclick="window.open('/econsent/', 'footer', 'width=500,height=400,scrollbars=yes,status=no,menubars=no');return false">E-consent</a>, <a href="javascript:{}" onclick="window.open('/privacy/', 'footer', 'width=500,height=400,scrollbars=yes,status=no,menubars=no');return false">Privacy Policy</a> &amp; <a href="javascript:{}" onclick="window.open('/terms/', 'footer', 'width=500,height=400,scrollbars=yes,status=no,menubars=no');return false">Terms of Use</a> and that I may receive special offers.</label></p>
+					</div>
+					<div>
+						<input type="submit" class="submitBtn" name="submitr" value="Submit">
+					</div>
+					<div>
+						<input type="submit" class="editBtn" name="editr" value="Edit/View Info">
+					</div>
+					<input type="hidden" id="affId" name="affId" value="TEST">
+					<input type="hidden" id="opt" name="opt" value="">
+					<input type="hidden" id="subc1" name="subc1" value="">
+					<input type="hidden" id="subc2" name="subc2" value="">
+					<input type="hidden" id="subc3" name="subc3" value="">
+					<input type="hidden" id="rep" name="rep" value="1">
+					<input type="hidden" id="type" name="type" value="s">
+					<input type="hidden" id="luId" name="luId" value="">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="featuresPanel" class="page5s">
+		<div class="container-12">
+			<h1>How Does it Work?</h1>
+				<div class="feature grid-4">
+					<div class="inner">
+						<i class="icon icon1"></i>
+						<h2>Online Process</h2>
+						<p>Our simple two-step form takes minutes to complete, which means you'll get the money you need in less time.</p>
+					</div>
+				</div>
+				<div class="feature grid-4">
+					<div class="inner">
+						<i class="icon icon2"></i>
+						<h2>Quick Approval</h2>
+						<p>You can get approved for a loan regardless of your credit score or credit history!</p>
+					</div>
+				</div>
+				<div class="feature grid-4">
+					<div class="inner">
+						<i class="icon icon3"></i>
+						<h2>Get Your Funds</h2>
+						<p>Cash $100 - $1,000 will be wired to your back account by the next business day after approval.</p>
+					</div>
+				</div>
+			</div>
+			<div class="clear-fix"></div>
+		</div>
+		<div class="prominent">
+			<div class="container-12">
+				<div class="grid-7">
+					<span class="icon iconCheck"></span><h1>Your Process is as Easy as <strong>1-2-3.</strong></h1>
+					<p class="largeFont">At Cash101.co we have established one of the nation’s largest networks of lenders to help you get the funds you need for your short-term needs.</p>
+					<p>After you fill out the short and simple form on this website we work with our network of lenders to try and match you with the right lender for your loan at the best possible rates. If we are successful in matching you with a lender, you’ll see a page with a list of all the terms and conditions for the lender that we’ve determined is the best match for you. If you are unhappy with the terms of a loan from a lender you are under no obligation to continue on with the loan process. The best part is that we do not charge any fee to you for the use of our service.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="container-12">
+			<nav id="footerNav">
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="javascript:{}" onclick="window.open('/terms/', 'footer', 'width=600,height=450,scrollbars=yes,status=no,menubars=no');return false">Terms</a></li>
+					<li><a href="javascript:{}" onclick="window.open('/privacy/', 'footer', 'width=600,height=450,scrollbars=yes,status=no,menubars=no');return false">Privacy</a></li>
+					<li><a href="javascript:{}" onclick="window.open('/rates/', 'footer', 'width=600,height=450,scrollbars=yes,status=no,menubars=no');return false">Rates &amp; Fees</a></li>
+					<li><a href="javascript:{}" onclick="window.open('/faq/', 'footer', 'width=600,height=450,scrollbars=yes,status=no,menubars=no');return false">FAQ</a></li>
+					<li><a href="javascript:{}" onclick="window.open('/contact/', 'footer', 'width=600,height=450,scrollbars=yes,status=no,menubars=no');return false">Contact Us</a></li>
+					<li><a href="javascript:{}" onclick="window.open('/unsub/', 'footer', 'width=600,height=450,scrollbars=yes,status=no,menubars=no');return false">Unsub</a></li>
+				</ul>
+			</nav>
+			<div class="disclaimer">
+				<p><b>Important Note</b>: Payday loans or cash advances are provided for the purpose of assisting you with short term financing to resolve immediate cash needs and should not be considered a long term solution. All users should seek advice from the appropriate professional before entering into this type of loan.</p>
+				<p><b>We Are Not Lenders or Brokers</b>. The operator of this website is not a lender, nor a broker, agent or representative to any lender. We do not make cash advances or credit decisions. Advertising on or through this website does not constitute an offer or solicitation to lend money to you. This website provides a service wherein we collect the information you submit to us and provide it to an independent network of companies, including lenders, who will secure the loan for you. All financial terms of the loan will be presented to you by the lender. For details, questions or concerns regarding your cash advance or payday loan, please contact your lender directly. Typically lenders will not perform credit checks with the three credit reporting bureaus: Experian, Equifax, or Trans Union. Credit checks or consumer reports through alternative providers may be obtained by some lenders.</p>
+				<p><b>Limitations</b>. Not all lenders can provide you with up to $1,000 on your first advance. Often this is dependent upon the State in which you reside and the information you provide to us for the lender's review. Providing your information on this Website does not guarantee that you will be approved for a cash advance or loan. Cash transfer times may vary between lenders and may depend on your individual financial institution. In some circumstances faxing may be required. This service is not available in all states, and the states serviced by this Website may change from time to time without notice. This service does not constitute an offer or solicitation for payday loans where prohibited by law.</p>
+				<p><b>No Endorsement</b>. The operator of this website is a marketer who is compensated for their services as described in our <a class="link" href="javascript:{}" onclick="window.open('/disclosure/', 'footer', 'width=600,height=450,scrollbars=yes,status=no,menubars=no');return false">marketing disclosure</a> and does not endorse or recommend any service or product advertised on or through this site.</p>
+			</div>
+		</div>
+	</footer>
+</div>
+</body>
+</html>
+

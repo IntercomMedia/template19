@@ -342,6 +342,7 @@ header#mainHeader {
     -ms-flex-direction: column;
     flex-direction: column;
     -webkit-justify-content: flex-end;
+    justify-content: flex-end;
     -ms-flex-pack: end;
 }
 
@@ -1069,6 +1070,10 @@ input.submitBtn {
     margin-bottom: 40px;
 }
 
+.prominent h1 strong {
+	white-space: nowrap;
+}
+
 .prominent p {
     font-size: 1.538em;
 }
@@ -1632,7 +1637,6 @@ a.noBankAccount:hover{
 .page5 .feature p,
 .page4 .feature h2,
 .page4 .feature p{
-	text-align: left;
 	max-width: 100%;
 }
 
@@ -2085,7 +2089,7 @@ a.noBankAccount:hover{
 	margin-bottom: 20px;
 	font-size: 1.75em;
 	transition: all .25s;
-	line-height: 3;
+	line-height: 50px;
 	text-align: center;
 	border-bottom: 4px solid #323F47;
 	box-shadow: inset 0 0 20px rgba(0,0,0,.15);
@@ -2094,7 +2098,7 @@ a.noBankAccount:hover{
 .offers a i{
 	color: #323F47;
 	font-size: 3em;
-	line-height: 1;
+	line-height: 50px;
 	float: left;
 }
 
@@ -2109,6 +2113,8 @@ a.noBankAccount:hover{
 
 .offers .numb{
 	width: 40px;
+	line-height: 50px;
+	height: 50px;
 	border-radius:  0 10px 10px 0;
 	float: right;
 	background: #323F47;
@@ -2701,6 +2707,8 @@ span.validateIcon div:after {
     .page5 #mainPanel.page5 h1 span:nth-child(2) {
 	    
     }
+    
+    #mainPanel #fields .fieldElement#emailField
 	#mainPanel.page52 #fields #freqField,
     #mainPanel.page52 #fields #pdField,
     #mainPanel.page52 #fields #pd2Field,
@@ -2708,6 +2716,7 @@ span.validateIcon div:after {
 	#mainPanel #fields .fieldElement#ssnField, 
 	#mainPanel #fields .fieldElement#byField, 
 	#mainPanel #fields .fieldElement#zipField,
+	#mainPanel #fields .fieldElement#emailField,
 	#mainPanel.page5 #fields #amountField.fieldElement,
 	#mainPanel.page5 #fields .fieldElement,
 	#mainPanel #fields .fieldElement{
@@ -2889,6 +2898,12 @@ span.validateIcon div:after {
 	    font-size: 1.5em;
     }
 	
+	
+	#mainPanel-alt #fields .fieldElement {
+		width: 100%;
+		margin-right: 0;
+	}
+	
 	.prominent h1{
     	font-size: 2em;
     }
@@ -2938,6 +2953,7 @@ span.validateIcon div:after {
     	.offers i,
     	.offers .numb{
         	line-height: 35px;
+        	height: 35px;
   	  }
 	
 	.matching h1 .phone-number strong{
