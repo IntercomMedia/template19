@@ -1671,6 +1671,10 @@ a.noBankAccount:hover{
 	min-height: 60vh;
 }
 
+.page5s #mainForm {
+    display: block;
+}
+
 #mainPanel.page5s .container-12 {
 	display: flex;
 	max-width: 1000px;
