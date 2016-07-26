@@ -3,9 +3,9 @@
 <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <title>MoneyPrime.com</title>
-    <link href="css/base.css" rel="stylesheet" type="text/css" />
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="inc/base.css" rel="stylesheet" type="text/css" />
+    <link href="inc/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="inc/styles.css" rel="stylesheet" type="text/css" />
     <?php 
     if( strstr($_SERVER['HTTP_USER_AGENT'],'Android') ||
     	strstr($_SERVER['HTTP_USER_AGENT'],'webOS') ||
@@ -33,8 +33,12 @@
         	
         	function loseTime(){
         		time = time -1;
-        		displayTime();
-        		displayPercentage();
+        		if(time < 0) {
+                    window.clearInterval(countDown);
+        		}else {
+        		    displayTime();
+                    displayPercentage();
+        		}
         	}
         	
         	function displayTime(){
@@ -49,8 +53,8 @@
         	}
         	
         	function displayPercentage(){
-        		percentNum = (startime-time)/time;
-        		percentNum = Math.floor(percentNum *1000) / 100;
+        		percentNum = (startime-time)/startime;
+        		percentNum = Math.floor(percentNum * 1000) / 10;
         		progressBar.width(percentNum + '%');
         	}
         	
@@ -63,7 +67,7 @@
         	
         }
         
-        timeDown('#percentBar', 5);
+        timeDown('#percentBar', 1);
     	/*retina image replacement script */
     	        var root = (typeof exports == 'undefined' ? window : exports);
     	
