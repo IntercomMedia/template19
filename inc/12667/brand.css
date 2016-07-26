@@ -35,10 +35,6 @@ input.submitBtn,
     background: #8CB848;
 }
 
-.block-blurb .icon-svg {
-    stroke: #fff;
-}
-
 .block-blurb.alternate .icon-svg {
     stroke: #8CB848;
 }
@@ -106,3 +102,14 @@ input.submitBtn,
 .prominent .largeFont {
     border-color: #BCCFD4;
 }
+
+
+/* =========================================================================
+ * 
+ * Custom Overrides Go Here.
+ *
+ * ========================================================================= */
+ 
+ .icon-svg path {
+     fill: #fff;
+ }
